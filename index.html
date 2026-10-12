@@ -99,7 +99,6 @@ h1.title .yr{color:var(--accent)}
 .tab{appearance:none;background:none;border:0;font:inherit;font-size:14px;color:var(--muted);padding:14px 12px 12px;border-bottom:2px solid transparent;cursor:pointer;white-space:nowrap}
 .tab:hover{color:var(--ink)}
 .tab[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--ink);font-weight:500}
-.tab .ext-dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--niseko);margin-left:6px;vertical-align:middle}
 
 main{padding-block:32px 80px}
 .view{display:grid;gap:40px}
@@ -348,23 +347,6 @@ tr.rec td:first-child{box-shadow:inset 3px 0 0 var(--accent)}
 .facts li b{color:var(--ink);font-weight:500;display:block;margin-bottom:2px}
 @media (max-width:820px){.place{grid-template-columns:1fr;gap:14px}.facts{grid-template-columns:1fr}}
 
-.ext-hero{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:end;padding-bottom:24px;border-bottom:1px solid var(--line)}
-.ext-hero h2{font-size:clamp(28px,4vw,40px);letter-spacing:-.02em}
-.ext-hero .kj{color:var(--niseko);font-size:15px;letter-spacing:.1em;font-weight:500}
-@media (max-width:640px){.ext-hero{grid-template-columns:1fr}}
-.ext-days{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
-@media (max-width:900px){.ext-days{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:520px){.ext-days{grid-template-columns:1fr}}
-.xd{border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);padding:16px 18px;display:grid;gap:10px;align-content:start}
-.xd .h{display:flex;gap:10px;align-items:baseline}
-.xd .h .n{font-family:var(--mono);font-size:30px;letter-spacing:-.04em;line-height:1}
-.xd .h .m{font-size:12px;color:var(--muted);line-height:1.3}
-.xd h4{font-size:15px}
-.xd ul{list-style:none;display:grid;gap:6px;font-size:13px;color:var(--ink-2)}
-.xd li{display:grid;grid-template-columns:44px 1fr;gap:6px}
-.xd li .t{color:var(--muted);font-size:12px;padding-top:1px}
-.xd .open{font-size:13px}
-
 .foot{border-top:1px solid var(--line);padding-block:24px 40px;font-size:12.5px;color:var(--muted)}
 .foot .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
@@ -399,7 +381,6 @@ tr.rec td:first-child{box-shadow:inset 3px 0 0 var(--accent)}
       <button class="tab" role="tab" type="button" data-view="bo">Overnatting</button>
       <button class="tab" role="tab" type="button" data-view="reise">Fly og bil</button>
       <button class="tab" role="tab" type="button" data-view="innenlands">Innenlands &amp; Bagasje</button>
-      <button class="tab" role="tab" type="button" data-view="forlengelse">Forlengelse<span class="ext-dot" aria-hidden="true"></span></button>
       <button class="tab" role="tab" type="button" data-view="steder">Steder og funfacts</button>
     </nav>
   </div>
@@ -625,7 +606,7 @@ tr.rec td:first-child{box-shadow:inset 3px 0 0 var(--accent)}
         <div class="kj" lang="ja">ニセコ</div>
         <h3>Niseko og Haneda</h3>
         <p class="dates">28.–31. jan · Jonas, Jørgen, Terje</p>
-        <p class="need">To netter i Hirafu og én natt ved Haneda før hjemreisen. Se også fanen <a href="#forlengelse" data-goto="forlengelse">Forlengelse</a>.</p>
+        <p class="need">To netter i Hirafu og én natt ved Haneda før hjemreisen.</p>
       </div>
       <div>
         <div class="opts">
@@ -969,53 +950,6 @@ tr.rec td:first-child{box-shadow:inset 3px 0 0 var(--accent)}
   <p class="muted" style="font-size:12.5px">Kilder: <a href="https://www.google.com/travel/flights" target="_blank" rel="noopener">Google Flights (11.10.2026)</a> · <a href="https://www.kuronekoyamato.co.jp/ytc/info/pdf/info_250501_1_1.pdf" target="_blank" rel="noopener">Yamato, prisliste fra 1.10.2025 (PDF)</a> · <a href="https://www.kuronekoyamato.co.jp/ytc/customer/send/services/ski/" target="_blank" rel="noopener">Yamato Ski TA-Q-BIN</a> · <a href="https://www.jalabc.com/airport_counter_service/baggage_storage.html" target="_blank" rel="noopener">JAL ABC oppbevaring</a> · <a href="https://www.narita-airport.jp/en/service/delivery/locker" target="_blank" rel="noopener">Narita, skap</a> · <a href="https://www.jal.co.jp/flights/en-us/japan-domestic-routes" target="_blank" rel="noopener">JAL Explorer Pass</a> · <a href="https://www.jal.co.jp/jp/ja/dom/baggage/checked/" target="_blank" rel="noopener">JAL innenriks bagasje</a> · <a href="https://www.jal.co.jp/en/dom/change/irregular_refund.html" target="_blank" rel="noopener">JAL ved kansellering</a> · <a href="https://www.ana.co.jp/en/jp/guide/plan/fare/domestic/simple-standard-flex/" target="_blank" rel="noopener">ANA Simple/Standard/Flex</a> · <a href="https://www.ana.co.jp/en/jp/guide/plan/fare/domestic/charge-list/" target="_blank" rel="noopener">ANA gebyrer</a> · <a href="https://www.airdo.jp/en/plan/fare/list/welcome-hokkaido/" target="_blank" rel="noopener">AIRDO Welcome to HOKKAIDO</a> · <a href="https://www.skymark.co.jp/en/baggage/checked.html" target="_blank" rel="noopener">Skymark bagasje</a> · <a href="https://www.flypeach.com/en/lm/st/w_schedule" target="_blank" rel="noopener">Peach</a> · <a href="https://www.jetstar.com/jp/en/help/oversized-baggage" target="_blank" rel="noopener">Jetstar</a> · <a href="https://tokyo-haneda.com/en/access/travel_between_terminals/" target="_blank" rel="noopener">Haneda terminaler</a> · <a href="https://www.yamato-hd.co.jp/important/pdf/important_20240920_1_1.pdf" target="_blank" rel="noopener">Yamatos prisliste for Ski TA-Q-BIN (PDF)</a> · <a href="https://www.lnews.jp/2024/09/q0920301.html" target="_blank" rel="noopener">LNEWS om endringene i 2024</a> · <a href="https://www.narita-airport.jp/en/service/delivery/baggage/" target="_blank" rel="noopener">Narita Airport: Baggage Delivery</a></p>
 </section>
 
-<!-- ================= FORLENGELSE ================= -->
-<section class="view" id="v-forlengelse" aria-label="Forlengelse" hidden>
-  <div class="ext-hero">
-    <div>
-      <p class="kj" lang="ja">ニセコ · Niseko</p>
-      <h2 style="margin-top:8px">Tre dager pudder i Niseko</h2>
-      <p class="lead" style="margin-top:10px">For Jonas, Jørgen og Terje, fra tor. 28. til søn. 31. januar. Torgeir drar til Tokyo 26. og flyr hjem 27. Dere tre blir i Otaru til 28., kjører til Niseko og beholder bilen. Lørdag 30. flyr dere til Tokyo, og søndag 31. drar dere hjem med KLM fra Narita.</p>
-    </div>
-    <div class="count" style="text-align:left">
-      <div class="n" style="color:var(--niseko)">+3</div>
-      <div class="l">skidager</div>
-    </div>
-  </div>
-
-  <div class="ext-days" id="ext-days"></div>
-
-  <div class="callout">
-    <span class="ic">NB</span>
-    <div>Vi antar at dere tre flyr hjem med KL862 fra <b>Narita</b> kl. 13:35 søndag 31. jan. Derfor sover dere ved Haneda natta før og tar Limousine Bus til Narita om morgenen. Går flyet fra et annet sted eller til en annen tid, må natt 30. jan justeres.</div>
-  </div>
-
-  <div class="grid-2" style="align-items:start">
-    <div>
-      <div class="sec-h"><h2>Logistikk</h2></div>
-      <ul class="list">
-        <li><span><b>Bil:</b> endre bookingen til retur <b>lør. 30. jan ca. 16:45</b> på Chitose med en gang. En forlengelse avhenger av ledige biler, og store biler blir utsolgt. Alle som skal kjøre må stå på kontrakten, også hvis Torgeir er den som leier.</span></li>
-        <li><span><b>Heiskort:</b> 3-dagers All Mountain Pass koster ¥39 500 (ca. kr 2 765). Dagene må være på rad, og kortet gjelder også kveldsski. Det er ca. 5 % billigere på nett, pluss ¥500 for IC-kortet.</span></li>
-        <li><span><b>Fly 30. jan:</b> JAL 19:30 eller ANA 19:30. Siste avgang er 21:45. ANA Standard eller Flex har 2 × 23 kg og kan endres, så flytt flyet frem hvis det er meldt storm.</span></li>
-        <li><span><b>Natt 30. jan:</b> Haneda Excel Hotel Tokyu ligger inne i terminal 2. Flyr dere JAL, lander dere i T1, og det er innendørs gangvei mellom terminalene.</span></li>
-        <li><span><b>31. jan:</b> Limousine Bus Haneda → Narita ved 08:30 (65–95 min). Innsjekkingen hos KLM stenger ca. 12:35.</span></li>
-        <li><span><b>Middag i Hirafu:</b> book bord flere uker før i høysesongen. Tozanken (ramen) og Bar Gyu+ tar ikke reservasjoner.</span></li>
-      </ul>
-    </div>
-    <div>
-      <div class="sec-h"><h2>Offpist i Niseko</h2></div>
-      <p style="font-size:14px;color:var(--ink-2)">Niseko har 11 nummererte porter ut til offpist, blant annet Annupuri Peak, Hirafu Peak og Hanazono Ridge. Patruljen åpner dem hver dag etter Niseko Avalanche Information.</p>
-      <ul class="list" style="margin-top:12px">
-        <li><span>Gå bare ut gjennom en <b>åpen port</b>, aldri under tauet.</span></li>
-        <li><span><b>Hjelm og skredsender er påbudt.</b> Søkestang og spade anbefales.</span></li>
-        <li><span>Bryter dere reglene, mister dere heiskortet. En redningsaksjon koster minst ¥100 000.</span></li>
-      </ul>
-      <div class="sec-h" style="margin-top:28px"><h2>Plan B: Hakone</h2></div>
-      <p style="font-size:14px;color:var(--ink-2)">Er dere lei av snø, kan dere droppe Niseko, levere bilen på Chitose 28. jan og fly til Tokyo. Ta toget til Hakone (Keikyu til Shinagawa, shinkansen til Odawara, 2,5–3 t fra Haneda) og bo 2 netter på ryokanen <a href="https://www.princehotels.com/ryuguden/" target="_blank" rel="noopener">Ryuguden</a> ved Ashi-sjøen, med onsen, kaiseki og utsikt mot Fuji. Det koster ca. kr 4 200–7 000 per person. Tilbake til Haneda eller Narita 30. jan.</p>
-    </div>
-  </div>
-</section>
-
 <!-- ================= STEDER ================= -->
 <section class="view" id="v-steder" aria-label="Steder og funfacts" hidden>
   <div class="sec-h"><h2>Steder og funfacts</h2><span class="aside">豆知識 · mame-chishiki: småkunnskap</span></div>
@@ -1233,7 +1167,7 @@ days:[
  book:"Shibuya Sky: billettene legges ut 14 dager før, altså 2. januar.",
  fact:"Opptil ca. 3 000 mennesker krysser Scramble på én grønn fase. Hundestatuen Hachikō var selv til stede da statuen ble avduket i 1934."},
 
-{date:"2027-01-17",base:"tokyo",title:"Asakusa, Senso-ji og Skytree",place:"Asakusa · Sumida",sleep:"Tokyo",wx:"10° / 1°",
+{date:"2027-01-17",base:"tokyo",title:"Asakusa, Senso-ji og Skytree",place:"Asakusa · Sumida",sleep:"<a href='https://maps.app.goo.gl/wnUPa3JKz82dDyAF6' target='_blank' rel='noopener'>Comfort Hotel ERA Tokyo Higashi Kanda</a>",wx:"10° / 1°",
  intro:"Gamle Tokyo og den nye skylinen på én dag. Sumoturneringen går rett over elva.",
  items:[
   {t:"09:00",w:"Asakusa",n:"Kaminarimon-porten og gatematen på Nakamise-dori: melon pan, ningyo-yaki og matcha-is."},
@@ -1246,7 +1180,7 @@ days:[
  book:"Sumo: salget åpner 5. des kl. 10:00 japansk tid (02:00 norsk tid) på sumo.pia.jp. Turneringen i 2026 ble utsolgt.",
  fact:"634 m kan leses mu-sa-shi, navnet på den gamle provinsen rundt Tokyo. Lykta i Kaminarimon veier ca. 700 kg og ble betalt av Panasonic-gründeren, og det står «Matsushita Denki» under den."},
 
-{date:"2027-01-18",base:"tokyo",title:"Meiji Jingu, Harajuku og Shinjuku",place:"Shibuya · Shinjuku",sleep:"Tokyo",wx:"10° / 1°",
+{date:"2027-01-18",base:"tokyo",title:"Meiji Jingu, Harajuku og Shinjuku",place:"Shibuya · Shinjuku",sleep:"<a href='https://maps.app.goo.gl/wnUPa3JKz82dDyAF6' target='_blank' rel='noopener'>Comfort Hotel ERA Tokyo Higashi Kanda</a>",wx:"10° / 1°",
  intro:"Siste dag i Tokyo. Fra skogen rundt helligdommen til neonlysene i Shinjuku, og pakking før en tidlig start i morgen.",
  items:[
   {t:"09:00",w:"Meiji Jingu",n:"Gå inn gjennom den store toriien ved Harajuku stasjon. Morgenen er roligst."},
@@ -1274,7 +1208,7 @@ days:[
  tip:"Fyll tanken før dere forlater motorveien. Se opp for hjort i skumringen. Northern Road Navi (på engelsk) viser veimeldinger.",
  fact:"«Ningle» er 15 cm høye skogsfolk i fortellingene til Kuramoto Sō, som også skrev TV-serien «Kita no Kuni kara» som gjorde Furano berømt."},
 
-{date:"2027-01-20",base:"furano",title:"Skidag 1 · Blue Pond i kveldslys",place:"Furano → Biei Shirogane",sleep:"Furano",wx:"−4° / −14°",travel:"Furano → Blue Pond 35 min",
+{date:"2027-01-20",base:"furano",title:"Skidag 1 · Blue Pond i kveldslys",place:"Furano → Biei Shirogane",sleep:"<a href='https://maps.app.goo.gl/tJvPD35uXfmBsq886' target='_blank' rel='noopener'>Hotel Edel Warme</a>",wx:"−4° / −14°",travel:"Furano → Blue Pond 35 min",
  intro:"Kjør til Furano Ropeway og ski til ettermiddagen. Kjør så til den opplyste dammen og fossen.",
  items:[
   {t:"08:30",w:"Heiskort",n:"Dagskort for voksne kostet ¥8 000 i 2025/26 (regn med ca. ¥8 500), og det er ca. ¥500 billigere på nett. Det finnes ikke flerdagskort."},
@@ -1300,7 +1234,7 @@ days:[
  tip:"Dere kjører i mørket på vinterføre etter en skidag. Fyll tanken før motorveien, se opp for hjort, og sjekk veimeldingene på Northern Road Navi før dere drar.",
  fact:"Furano har arrangert 16 World Cup-renn i alpint for menn siden 1977, flere enn noe annet sted i Japan."},
 
-{date:"2027-01-22",base:"otaru",title:"Otaru: kanalen og Sakaimachi-dori",place:"Otaru",sleep:"Otaru",wx:"−1° / −6°",
+{date:"2027-01-22",base:"otaru",title:"Otaru: kanalen og Sakaimachi-dori",place:"Otaru",sleep:"<a href='https://maps.app.goo.gl/CUrrxzJcovkTxj4u9' target='_blank' rel='noopener'>Dormy Inn Premium Otaru</a>",wx:"−1° / −6°",
  intro:"En rolig dag etter kjøreturen. Sentrum er lite nok til å gå over alt.",
  items:[
   {t:"10:00",w:"Kanalen og Sakaimachi-dori",n:"Glassbutikker, Musikkboksmuseet med dampklokka, og Kitaichi Hall, som bare lyses av oljelamper."},
@@ -1309,7 +1243,7 @@ days:[
  ],
  fact:"På 1910–30-tallet var Otaru «Nordens Wall Street», med gate etter gate med banker. Kanalen fra 1923 buer fordi den ble bygget på utfylt land."},
 
-{date:"2027-01-23",base:"otaru",title:"Teine eller skihopp i Okurayama",place:"Sapporo Teine · Okurayama",sleep:"Otaru",wx:"−1° / −6°",travel:"Bil ca. 40 min hver vei",
+{date:"2027-01-23",base:"otaru",title:"Teine eller skihopp i Okurayama",place:"Sapporo Teine · Okurayama",sleep:"<a href='https://maps.app.goo.gl/CUrrxzJcovkTxj4u9' target='_blank' rel='noopener'>Dormy Inn Premium Otaru</a>",wx:"−1° / −6°",travel:"Bil ca. 40 min hver vei",
  intro:"Ekstra dag i Otaru. Ta en skidag i Teine, eller se World Cup i hopp i Sapporo.",
  items:[
   {t:"09:00",w:"Ski i Sapporo Teine",n:"Ca. 40 min. OL-arena for slalåm og storslalåm i 1972, med utsikt over Sapporo og havet.",opt:1},
@@ -1318,7 +1252,7 @@ days:[
  ],
  fact:"Okurayama-hoppbakken i Sapporo (1931) ble tegnet av den norske generalen Olaf Helset."},
 
-{date:"2027-01-24",base:"otaru",title:"Skidag 3 · Kiroro",place:"Otaru → Kiroro",sleep:"Otaru",wx:"−1° / −6°",travel:"Bil ca. 40 min hver vei",
+{date:"2027-01-24",base:"otaru",title:"Skidag 3 · Kiroro",place:"Otaru → Kiroro",sleep:"<a href='https://maps.app.goo.gl/CUrrxzJcovkTxj4u9' target='_blank' rel='noopener'>Dormy Inn Premium Otaru</a>",wx:"−1° / −6°",travel:"Bil ca. 40 min hver vei",
  intro:"Kiroro ligger i fjellene sør for Otaru og er den nærmeste store bakken.",
  items:[
   {t:"08:30",w:"Otaru → Kiroro",n:"Ca. 40 min med bil (28 km). Sjekk dagskortprisen for 2026/27 og kjøp gjerne på nett."},
@@ -1328,7 +1262,7 @@ days:[
  ],
  bag:"<b>Torgeir:</b> etter skidagen sender du skibagen (og gjerne kofferten) fra resepsjonen til Narita med Yamato Airport TA-Q-BIN. Den må komme frem dagen før flyet (26. jan). Yamato krever levering 2 dager før (3 i enkelte områder), og flyplassgebyret er ¥660. Be resepsjonen bekrefte at den rekker frem."},
 
-{date:"2027-01-25",base:"otaru",title:"Dagstur til Sapporo",place:"Otaru → Sapporo",sleep:"Otaru",wx:"−1° / −6°",travel:"JR-tog 32–45 min hver vei",
+{date:"2027-01-25",base:"otaru",title:"Dagstur til Sapporo",place:"Otaru → Sapporo",sleep:"<a href='https://maps.app.goo.gl/CUrrxzJcovkTxj4u9' target='_blank' rel='noopener'>Dormy Inn Premium Otaru</a>",wx:"−1° / −6°",travel:"JR-tog 32–45 min hver vei",
  intro:"Ta toget. En Hiace er rundt 2 m høy og passer ikke i parkeringshusene i Sapporo.",
  items:[
   {t:"10:00",w:"JR Otaru → Sapporo",n:"Toget går langs kysten, så sett dere på høyre side."},
@@ -1338,7 +1272,7 @@ days:[
  ],
  fact:"Sapporo er Japans eldste ølmerke (1876). Miso-ramen ble oppfunnet her på 1950-tallet, og OL i 1972 var det første vinter-OL i Asia."},
 
-{date:"2027-01-26",base:"otaru",title:"Nikka Yoichi og Otaru · Torgeir til Tokyo",place:"Otaru · Yoichi",sleep:"Otaru · Torgeir: Tokyo",wx:"−1° / −6°",
+{date:"2027-01-26",base:"otaru",title:"Nikka Yoichi og Otaru · Torgeir til Tokyo",place:"Otaru · Yoichi",sleep:"<a href='https://maps.app.goo.gl/CUrrxzJcovkTxj4u9' target='_blank' rel='noopener'>Dormy Inn Premium Otaru</a> · Torgeir: Tokyo",wx:"−1° / −6°",
  tor:{base:"tokyo",move:1,seg:"Reise",title:"Til Tokyo",wx:"10° / 1°",book:"",place:"Otaru → Chitose → Haneda",sleep:"<a href='https://maps.app.goo.gl/wnUPa3JKz82dDyAF6' target='_blank' rel='noopener'>Comfort Hotel ERA Tokyo Higashi Kanda</a> <span class='muted'>(forslag)</span>",travel:"Tog 73 min + fly ca. 1 t 35 m",intro:"Siste morgen i Otaru. Fly til Tokyo på ettermiddagen, og ta en siste kveld i byen."},
  intro:"Whisky om formiddagen og byen om ettermiddagen. Ta toget, så slipper noen å kjøre. Torgeir drar til Tokyo i dag.",
  items:[
@@ -1354,7 +1288,7 @@ days:[
  book:"Nikka-omvisningen: bookingen åpner 4 uker før, altså 29. desember.",
  fact:"Nikka-gründeren Masataka Taketsuru lærte å lage whisky i Skottland, giftet seg med skotske Rita Cowan og valgte Yoichi i 1934 fordi stedet minnet ham om Skottland."},
 
-{date:"2027-01-27",base:"otaru",title:"Fri dag i Otaru · Torgeir drar hjem",place:"Otaru",sleep:"Otaru · Torgeir: hjemme",wx:"−1° / −6°",
+{date:"2027-01-27",base:"otaru",title:"Fri dag i Otaru · Torgeir drar hjem",place:"Otaru",sleep:"<a href='https://maps.app.goo.gl/CUrrxzJcovkTxj4u9' target='_blank' rel='noopener'>Dormy Inn Premium Otaru</a> · Torgeir: hjemme",wx:"−1° / −6°",
  tor:{base:"travel",move:1,kj:"帰国",seg:"Hjem",title:"Hjem",place:"Tokyo → Narita → Sola",sleep:"Hjemme",wx:"",travel:"Narita 13:35 → Sola 22:40",intro:"KL862 går fra <b>Narita</b>, ikke Haneda. Keisei Access Express går direkte dit fra Higashi-Nihombashi."},
  intro:"Siste dag i Otaru for de tre. Pakk og fyll tanken før Niseko i morgen.",
  items:[
@@ -1368,7 +1302,7 @@ days:[
  bag:"<b>Torgeir:</b> skibagen venter på Yamato-skranken på Narita T1.",
  fact:"Dampklokka utenfor Musikkboksmuseet er laget av Raymond Saunders, som også laget Gastown-klokka i Vancouver. Den spiller hvert 15. minutt."},
 
-{date:"2027-01-28",base:"niseko",who:"ext",move:1,seg:"Reise",title:"Til Niseko",place:"Otaru → Niseko",sleep:"Niseko Park Hotel",wx:"−1° / −6°",travel:"Bil 1,5–2 t",
+{date:"2027-01-28",base:"niseko",who:"ext",move:1,seg:"Reise",title:"Til Niseko",place:"Otaru → Niseko",sleep:"<a href='https://www.google.com/maps/search/?api=1&query=Niseko+Park+Hotel+Hirafu' target='_blank' rel='noopener'>Niseko Park Hotel</a>",wx:"−1° / −6°",travel:"Bil 1,5–2 t",
  items:[
   {t:"08:00",w:"Frokost og utsjekk",n:"Pakk bilen."},
   {t:"08:30",w:"Otaru → Niseko (Hirafu)",n:"Ekspressvei til Yoichi IC, så Route 5. 1 t 10 m på bar vei, men regn 1,5–2 t."},
@@ -1379,7 +1313,7 @@ days:[
  bag:"Alt ligger i bilen.",
  fact:"Tokyo stasjon og Bank of Japan i Otaru er tegnet av samme arkitekt, Tatsuno Kingo."},
 
-{date:"2027-01-29",base:"niseko",who:"ext",title:"Pudderdag i Niseko",place:"Niseko United",sleep:"Niseko Park Hotel",wx:"ca. −3° / −10°",
+{date:"2027-01-29",base:"niseko",who:"ext",title:"Pudderdag i Niseko",place:"Niseko United",sleep:"<a href='https://www.google.com/maps/search/?api=1&query=Niseko+Park+Hotel+Hirafu' target='_blank' rel='noopener'>Niseko Park Hotel</a>",wx:"ca. −3° / −10°",
  items:[
   {t:"08:00",w:"Sjekk portene og skredvarselet",n:"Patruljen åpner portene til offpist hver morgen etter Niseko Avalanche Information."},
   {t:"08:30",w:"Hel dag: Annupuri, Niseko Village og Hanazono",n:"Alle fire områdene henger sammen: 30 heiser og 73 nedfarter."},
@@ -1389,7 +1323,7 @@ days:[
  tip:"Portene: gå bare ut gjennom en åpen port, aldri under tauet. Hjelm og skredsender er påbudt, og det koster minst ¥100 000 å bli hentet.",
  fact:"Yōtei (1 898 m) kalles «Ezo Fuji». Østerrikeren Theodor von Lerch lærte japanerne å gå på ski her i 1912. I sesongen 2022/23 falt det 14 m snø."},
 
-{date:"2027-01-30",base:"niseko",who:"ext",move:1,seg:"Reise",title:"Siste pudder, så fly til Tokyo",place:"Niseko → Chitose → Haneda",sleep:"Haneda Excel Hotel Tokyu (T2)",wx:"ca. −3° / −10°",travel:"Bil ca. 3 t + fly 1 t 40 m",
+{date:"2027-01-30",base:"niseko",who:"ext",move:1,seg:"Reise",title:"Siste pudder, så fly til Tokyo",place:"Niseko → Chitose → Haneda",sleep:"<a href='https://www.google.com/maps/search/?api=1&query=Haneda+Excel+Hotel+Tokyu' target='_blank' rel='noopener'>Haneda Excel Hotel Tokyu</a> (T2)",wx:"ca. −3° / −10°",travel:"Bil ca. 3 t + fly 1 t 40 m",
  items:[
   {t:"07:30",w:"Sjekk ut og pakk bilen",n:""},
   {t:"08:30",w:"Siste formiddag i bakken",n:"Stopp senest 12:45."},
@@ -1420,8 +1354,8 @@ points:[
   {id:"s1",type:"stay",num:1,b:"tokyo",ll:[35.69457,139.77973],name:"Comfort Hotel ERA Tokyo Higashi Kanda",label:"Comfort ERA",kj:"東神田",short:"Tokyo · booket",dates:"16.–19. jan · 3 netter",kind:"Overnatting 1",zoom:60,info:"Booket. 4 min fra JR Bakurocho, 2 stopp fra Tokyo stasjon. Asakusa-linja går direkte til Narita og Haneda. Forslag for Torgeirs siste natt 26.–27. jan.",maps:"https://maps.app.goo.gl/wnUPa3JKz82dDyAF6",link:"bo",linkText:"Se overnatting",la:"end",lx:-14,ly:-6},
   {id:"s2",type:"stay",num:2,b:"furano",ll:[43.34298,142.36536],name:"Hotel Edel Warme",label:"Edel Warme",kj:"富良野",short:"Furano · hotell med onsen",dates:"19.–21. jan · 2 netter",kind:"Overnatting 2",zoom:40,info:"Døgnåpen resepsjon, onsen i huset og gratis parkering (fra bookingsider, ikke bekreftet). Ca. 2,5 km fra Shin Furano Prince og Furano Ropeway.",maps:"https://maps.app.goo.gl/tJvPD35uXfmBsq886",link:"bo",linkText:"Se alle alternativer"},
   {id:"s3",type:"stay",num:3,b:"otaru",ll:[43.19842,140.99472],name:"Dormy Inn Premium Otaru",label:"Dormy Inn Otaru",kj:"小樽",short:"Otaru · ved JR Otaru",dates:"21.–28. jan · 7 netter",kind:"Overnatting 3",zoom:40,info:"Naturlig onsen i huset. Resepsjonen er oppgitt som døgnåpen, så si fra på forhånd at dere kommer sent 21. jan. Parkering ca. ¥1 400 per natt, begrenset og uten reservasjon.",maps:"https://maps.app.goo.gl/CUrrxzJcovkTxj4u9",link:"bo",linkText:"Se alle alternativer",la:"end",lx:-14},
-  {id:"s4",type:"stay",num:4,b:"niseko",ext:1,ll:[42.8598,140.7021],name:"Niseko Park Hotel",label:"Niseko Park Hotel",kj:"ニセコ",short:"Niseko · forlengelse",dates:"28.–30. jan · 2 netter",kind:"Overnatting 4 · Jonas, Jørgen, Terje",zoom:40,info:"Japansk rom for 3, onsen og 50 m til heisen i Grand Hirafu. Bookingen åpner 1. okt.",link:"forlengelse",linkText:"Se forlengelsen",la:"end",lx:-14},
-  {id:"s5",type:"stay",num:5,b:"niseko",ext:1,ll:[35.5533,139.7868],name:"Haneda Excel Hotel Tokyu",label:"Haneda Excel",kj:"羽田",short:"Haneda T2 · forlengelse",dates:"30.–31. jan · 1 natt",kind:"Overnatting 5 · Jonas, Jørgen, Terje",zoom:60,info:"Ligger inne i terminal 2. Limousine Bus til Narita om morgenen.",link:"forlengelse",linkText:"Se forlengelsen",lx:14,ly:18,lminz:3},
+  {id:"s4",type:"stay",num:4,b:"niseko",ext:1,ll:[42.8598,140.7021],name:"Niseko Park Hotel",label:"Niseko Park Hotel",kj:"ニセコ",short:"Niseko · forlengelse",dates:"28.–30. jan · 2 netter",kind:"Overnatting 4 · Jonas, Jørgen, Terje",zoom:40,info:"Japansk rom for 3, onsen og 50 m til heisen i Grand Hirafu. Bookingen åpner 1. okt.",link:"bo",linkText:"Se alle alternativer",la:"end",lx:-14},
+  {id:"s5",type:"stay",num:5,b:"niseko",ext:1,ll:[35.5533,139.7868],name:"Haneda Excel Hotel Tokyu",label:"Haneda Excel",kj:"羽田",short:"Haneda T2 · forlengelse",dates:"30.–31. jan · 1 natt",kind:"Overnatting 5 · Jonas, Jørgen, Terje",zoom:60,info:"Ligger inne i terminal 2. Limousine Bus til Narita om morgenen.",link:"bo",linkText:"Se alle alternativer",lx:14,ly:18,lminz:3},
   {id:"a1",type:"airport",ll:[35.7720,140.3929],name:"Tokyo Narita (NRT)",label:"Narita",kj:"成田",kind:"Flyplass",info:"KLM ankommer terminal 1 kl. 11:45 den 16. jan og går hjem 13:35 (KL862): Torgeir 27. jan, de tre 31. jan.",b:"travel"},
   {id:"a2",type:"airport",ll:[35.5494,139.7798],name:"Tokyo Haneda (HND)",label:"Haneda",kj:"羽田",kind:"Flyplass",info:"Innenlandsfly til Chitose: JAL fra terminal 1, ANA og AIRDO fra terminal 2.",b:"travel",la:"end",lx:-10,ly:-4,lminz:3},
   {id:"a3",type:"airport",ll:[42.7752,141.6923],name:"New Chitose (CTS)",label:"New Chitose",kj:"新千歳",kind:"Flyplass · leiebil",info:"Leiebilskranker i 1F på innenlandsterminalen, og shuttlebuss på 10–15 min til kontorene. Ramen Dojo ligger i 3F.",b:"travel"},
@@ -1477,7 +1411,7 @@ const WDL=["søndag","mandag","tirsdag","onsdag","torsdag","fredag","lørdag"];
 function dp(iso){const[y,m,d]=iso.split("-").map(Number);const w=new Date(Date.UTC(y,m-1,d)).getUTCDay();return{d,wd:WD[w],wdl:WDL[w]};}
 const cvar=b=>`var(${DATA.bases[b].c})`;
 
-const VIEWS=["oversikt","dag","kart","bo","reise","innenlands","forlengelse","steder"];
+const VIEWS=["oversikt","dag","kart","bo","reise","innenlands","steder"];
 const state={person:store.get("person","alle"),view:"oversikt",day:null};
 if(state.person!=="alle"&&!DATA.people.includes(state.person))state.person="alle";
 
@@ -1590,11 +1524,6 @@ function renderOverview(){
   // budget
   const bu=DATA.budget,showExt=state.person!=="Torgeir";
   $("#budget").innerHTML=`<table><thead><tr><th>Post</th><th>Grunnlag</th><th style="text-align:right">kr / pers.</th></tr></thead><tbody>${bu.rows.map(r=>`<tr><td>${esc(r[0])}</td><td class="muted">${esc(r[1])}</td><td class="num" style="text-align:right">${esc(r[2])}</td></tr>`).join("")}<tr><td><b>Sum hovedplan</b></td><td class="muted">Uten langdistanse, mat og aktiviteter</td><td class="num" style="text-align:right"><b>${esc(bu.sum)}</b></td></tr>${showExt?`<tr><td>Forlengelse <span class="muted">(3 pers.)</span></td><td class="muted">${esc(bu.extNote)}</td><td class="num" style="text-align:right">${esc(bu.ext)}</td></tr>`:""}</tbody></table>`;
-}
-function renderExt(){
-  const ds=DATA.days.filter(d=>d.date>="2027-01-28");
-  $("#ext-days").innerHTML=ds.map(d=>{const x=dp(d.date);const its=d.items.filter(i=>i.who!=="torgeir"&&!i.opt);return`<article class="xd"><div class="h"><span class="n">${x.d}</span><span class="m">${x.wdl}<br>januar</span></div><h4>${d.date==="2027-01-28"?"Otaru → Niseko":esc(d.title)}</h4><ul>${its.map(i=>`<li><span class="t mono">${esc(i.t)}</span><span>${i.w}</span></li>`).join("")}</ul><a class="open" href="#dag-${x.d}" data-openday="${d.date}">Åpne dagen →</a></article>`;}).join("");
-  $$("#ext-days [data-openday]").forEach(a=>a.onclick=e=>{e.preventDefault();if(state.person==="Torgeir"){state.person="alle";store.set("person","alle");refresh();}openDay(a.dataset.openday);});
 }
 function fmtMin(m,approx){const h=Math.floor(m/60),r=m%60;return (approx?"~":"")+(h?`${h} t`:"")+(h&&r?" ":"")+(r?`${r} m`:"");}
 
@@ -1767,7 +1696,7 @@ const MapView={
 function boot(){
   $$(".tab").forEach(t=>t.onclick=()=>show(t.dataset.view,true));
   $$("[data-goto]").forEach(a=>a.addEventListener("click",e=>{const v=a.dataset.goto;if(!v)return;e.preventDefault();if(v.startsWith("dag-"))openDay("2027-01-"+v.slice(4).padStart(2,"0"));else{show(v,true);window.scrollTo({top:$(".tabbar").offsetTop,behavior:"smooth"});}}));
-  renderWho();renderCount();renderOverview();renderExt();
+  renderWho();renderCount();renderOverview();
   fromHash();
   window.addEventListener("hashchange",fromHash);
   setInterval(renderCount,60000);
