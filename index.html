@@ -24,7 +24,7 @@
   --furano:#0E97A8;
   --otaru:#2E8A5C;
   --move:#E0721A;
-  --niseko:#6857C4;
+  --ext:#6857C4;
   --travel:#8792A2;
   --warn:#9A5B00;
   --warn-soft:#FBF1DE;
@@ -42,7 +42,7 @@
     color-scheme:dark;
     --bg:#0B1017;--surface:#121923;--ink:#E6EBF1;--ink-2:#C0C9D5;--muted:#8D99AA;
     --line:#212B38;--line-2:#2E3A4A;--accent:#38BFCF;--accent-ink:#62D0DD;--accent-soft:#12303A;
-    --tokyo:#EE646D;--furano:#3BC1D1;--otaru:#55BF8B;--move:#F29A4C;--niseko:#9A8DEF;--travel:#7C889A;
+    --tokyo:#EE646D;--furano:#3BC1D1;--otaru:#55BF8B;--move:#F29A4C;--ext:#9A8DEF;--travel:#7C889A;
     --warn:#E8B45C;--warn-soft:#2E2515;--sea:#0E151E;--land:#18212D;--land-line:#2B394A;--yamanote:#9CCB45;
     --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px -14px rgba(0,0,0,.6);
   }
@@ -51,7 +51,7 @@
   color-scheme:dark;
   --bg:#0B1017;--surface:#121923;--ink:#E6EBF1;--ink-2:#C0C9D5;--muted:#8D99AA;
   --line:#212B38;--line-2:#2E3A4A;--accent:#38BFCF;--accent-ink:#62D0DD;--accent-soft:#12303A;
-  --tokyo:#EE646D;--furano:#3BC1D1;--otaru:#55BF8B;--move:#F29A4C;--niseko:#9A8DEF;--travel:#7C889A;
+  --tokyo:#EE646D;--furano:#3BC1D1;--otaru:#55BF8B;--move:#F29A4C;--ext:#9A8DEF;--travel:#7C889A;
   --warn:#E8B45C;--warn-soft:#2E2515;--sea:#0E151E;--land:#18212D;--land-line:#2B394A;--yamanote:#9CCB45;
   --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px -14px rgba(0,0,0,.6);
 }
@@ -129,7 +129,7 @@ main{padding-block:32px 80px}
 .sd.ext .bar,.sd.move .bar{background:repeating-linear-gradient(135deg,var(--c) 0 5px,color-mix(in srgb,var(--c) 55%,transparent) 5px 10px)}
 .sd .wd{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
 .sd .dn{font-family:var(--mono);font-size:15px;line-height:1}
-.sd.ext .dn::after{content:"";display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--niseko);margin-left:4px;vertical-align:middle}
+.sd.ext .dn::after{content:"";display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--ext);margin-left:4px;vertical-align:middle}
 .sd:hover .bar{filter:brightness(1.08)}
 .sd.today .bar::after{content:"I dag";position:absolute;inset:auto 0 -2px 0;font-size:10px;text-align:center;color:#fff}
 .sd.sel .dn{font-weight:500;text-decoration:underline;text-underline-offset:4px}
@@ -242,13 +242,13 @@ main{padding-block:32px 80px}
 .map-legend span{display:inline-flex;gap:6px;align-items:center}
 .lg-line{width:22px;height:0;border-top:2px solid var(--ink-2)}
 .lg-line.fl{border-top-style:dashed}
-.lg-line.ext{border-color:var(--niseko)}
+.lg-line.ext{border-color:var(--ext)}
 .lg-line.rl{border-top:2.4px dotted var(--ink-2)}
 .lg-line.ym{border-color:var(--yamanote);border-top-width:3px}
 .land{fill:var(--land);stroke:var(--land-line);stroke-width:.8;vector-effect:non-scaling-stroke}
 .rt{fill:none;stroke:var(--ink-2);stroke-width:1.6;vector-effect:non-scaling-stroke;stroke-linecap:round;opacity:.85}
 .rt.flight{stroke-dasharray:5 5;stroke-width:1.3}
-.rt.ext{stroke:var(--niseko)}
+.rt.ext{stroke:var(--ext)}
 .rt.rail{stroke-dasharray:1 4;stroke-width:2.4}
 .rt.ym{stroke:var(--yamanote);stroke-width:3;opacity:.75}
 .mk-g{cursor:pointer}
@@ -364,7 +364,7 @@ tr.rec td:first-child{box-shadow:inset 3px 0 0 var(--accent)}
       <div>
         <p class="route-line"><b>Stavanger</b><span class="arr">→</span><b>Tokyo</b> <span lang="ja">東京</span><span class="arr">→</span><b>Furano</b> <span lang="ja">富良野</span><span class="arr">→</span><b>Otaru</b> <span lang="ja">小樽</span><span class="arr">→</span><b>hjem</b></p>
         <h1 class="title">Japow <span class="yr">2027</span></h1>
-        <p class="mast-sub">15.–27. januar · 3 dager Tokyo, 2 skidager i Furano og 4 dager i Otaru. Tre av oss henger på til 31. januar.</p>
+        <p class="mast-sub">15.–27. januar · 3 dager Tokyo, 2 skidager i Furano og 4 dager i Otaru. Tre av oss drar videre til Kyoto og Osaka til 31. januar.</p>
       </div>
       <div class="count" id="count" aria-live="polite"></div>
     </div>
@@ -496,8 +496,13 @@ tr.rec td:first-child{box-shadow:inset 3px 0 0 var(--accent)}
             <a class="lnk" href="https://www.choice-hotels.jp/era/higashikanda/access/" target="_blank" rel="noopener">choice-hotels.jp</a>
             <a class="lnk" href="https://maps.app.goo.gl/wnUPa3JKz82dDyAF6" target="_blank" rel="noopener">Google Maps</a>
           </article>
+          <article class="opt pick">
+            <div class="top"><h4>Hotel Nikko Narita</h4><span class="badge">Torgeir · 26. jan</span></div>
+            <span class="type">Flyplasshotell · Narita</span>
+            <p>Torgeirs siste natt. Shuttlebussen til flyplassen tar ca. 15 min, og Naritasan Omotesando og Shinshoji-tempelet er 10–15 min unna med taxi.</p>
+            <a class="lnk" href="https://www.google.com/maps/search/?api=1&query=Hotel+Nikko+Narita" target="_blank" rel="noopener">Google Maps</a>
+          </article>
         </div>
-        <p class="tipline" style="margin-top:14px"><b>Torgeir 26.–27. jan:</b> forslag å bo her igjen siste natt. Asakusa-linja går direkte fra Haneda, og Keisei Access Express går direkte til Narita.</p>
       </div>
     </div>
 
@@ -556,7 +561,7 @@ tr.rec td:first-child{box-shadow:inset 3px 0 0 var(--accent)}
       <div class="city-h">
         <div class="kj" lang="ja">小樽</div>
         <h3>Otaru</h3>
-        <p class="dates">21.–28. jan · 7 netter (Torgeir 5)</p>
+        <p class="dates">21.–26. jan · 5 netter</p>
         <p class="need">Hotellet trenger døgnåpen resepsjon, fordi dere kommer sent på kvelden 21. jan. Det må også ha parkering som tåler en høy bil.</p>
       </div>
       <div>
@@ -602,47 +607,12 @@ tr.rec td:first-child{box-shadow:inset 3px 0 0 var(--accent)}
       </div>
     </div>
 
-    <div class="city" style="--c:var(--niseko)">
+    <div class="city" style="--c:var(--ext)">
       <div class="city-h">
-        <div class="kj" lang="ja">ニセコ</div>
-        <h3>Niseko og Haneda</h3>
-        <p class="dates">28.–31. jan · Jonas, Jørgen, Terje</p>
-        <p class="need">To netter i Hirafu og én natt ved Haneda før hjemreisen.</p>
-      </div>
-      <div>
-        <div class="opts">
-          <article class="opt pick">
-            <div class="top"><h4>Niseko Park Hotel</h4><span class="badge">Anbefalt</span></div>
-            <span class="type">Hotell · Grand Hirafu · 28.–30. jan</span>
-            <p>Japansk rom for 3 med frokostbuffet, onsen og sauna. 50 m til Family-løypa, og gratis parkering.</p>
-            <p class="price">kr 2 800–4 900 <span>/ natt</span></p>
-            <p class="cav">Vinterbookingen åpner 1. okt. 2026 kl. 10:00 japansk tid (03:00 norsk tid).</p>
-            <a class="lnk" href="https://www.niseko-park.co.jp/" target="_blank" rel="noopener">niseko-park.co.jp</a>
-          </article>
-          <article class="opt">
-            <div class="top"><h4>The Vale Niseko · 2BR</h4></div>
-            <span class="type">Leilighet, ski-in/ski-out · Hirafu</span>
-            <p>Ligger ved Ace Family-heisen, med onsen og basseng. 2 gratis bilplasser (førstemann til mølla).</p>
-            <p class="price">kr 10 500–17 500 <span>/ natt</span></p>
-            <p class="cav">25 % depositum betales ved booking, og hele beløpet trekkes 75 dager før ankomst.</p>
-            <a class="lnk" href="https://www.thevaleniseko.com/" target="_blank" rel="noopener">thevaleniseko.com</a>
-          </article>
-          <article class="opt">
-            <div class="top"><h4>Villa Fontaine Grand Haneda</h4></div>
-            <span class="type">Flyplasshotell · Terminal 3 · 30. jan</span>
-            <p>Har direkte gangforbindelse til terminal 3 og rom med 3–4 senger. Onsen på taket med utsikt mot Fuji (¥2 000 for gjester). Gratis buss fra T1/T2 på ca. 10 min.</p>
-            <p class="price">kr 3 200–4 900 <span>/ natt</span></p>
-            <p class="cav">Hjemreisen går fra Narita, så T3 er ingen fordel. Velg hotellet hvis dere vil ha onsen.</p>
-            <a class="lnk" href="https://www.hvf.jp/eng/hanedaairport-grand/" target="_blank" rel="noopener">hvf.jp</a>
-          </article>
-          <article class="opt pick">
-            <div class="top"><h4>Haneda Excel Hotel Tokyu</h4><span class="badge">Anbefalt · 30. jan</span></div>
-            <span class="type">Flyplasshotell · Terminal 2</span>
-            <p>Ligger inne i T2, med gangvei fra JALs T1. Limousine Bus til Narita går fra terminalen om morgenen.</p>
-            <p class="price">kr 2 500–3 900 <span>/ natt</span></p>
-            <a class="lnk" href="https://www.tokyuhotels.co.jp/en/haneda-e/" target="_blank" rel="noopener">tokyuhotels.co.jp</a>
-          </article>
-        </div>
+        <div class="kj" lang="ja">関西</div>
+        <h3>Kyoto og Osaka</h3>
+        <p class="dates">26.–31. jan · Jonas, Jørgen, Terje</p>
+        <p class="need">Ikke booket ennå. JAL3914 lander på Osaka Itami 15:20 den 26. jan, og KL862 går fra Narita 13:35 den 31. jan.</p>
       </div>
     </div>
   </div>
@@ -651,16 +621,15 @@ tr.rec td:first-child{box-shadow:inset 3px 0 0 var(--accent)}
 <!-- ================= LEIEBIL ================= -->
 <section class="view" id="v-reise" aria-label="Leiebil" hidden>
   <div>
-    <div class="sec-h"><h2>Leiebil på New Chitose</h2><span class="aside">19. jan ca. 13:00 → 28. jan (eller 30. jan med forlengelsen)</span></div>
+    <div class="sec-h"><h2>Leiebil på New Chitose</h2><span class="aside">Booket hos Nippon Rent-A-Car · 19.–26. jan</span></div>
     <div class="grid-2" style="align-items:start">
       <div class="panel pad" style="display:grid;gap:12px">
-        <p class="eyebrow">Anbefaling</p>
-        <h3 style="font-size:20px">Toyota Hiace Wagon eller Alphard, 4WD</h3>
-        <p style="font-size:14px;color:var(--ink-2)">Med 4 mann, 4 skibagger og 4 kofferter blir en «svær SUV» for trang: en Land Cruiser eller Prado har 5 seter og ikke nok bagasjeplass uten takboks. <b>Hiace Wagon</b> (10 seter) tar alt med god plass. <b>Alphard</b> fungerer med 3. seterad felt ned og myke kofferter.</p>
+        <p class="eyebrow">Booket</p>
+        <h3 style="font-size:20px">Minivan med 7 seter, 4WD og vinterdekk</h3>
+        <p style="font-size:14px;color:var(--ink-2)">Hentes og leveres på New Chitose. Med 4 mann, 4 skibagger og 4 kofferter må 3. seterad felles ned, og myke kofferter er lettere å få plass til.</p>
         <ul class="list">
-          <li><span><b>Med forlengelsen:</b> de tre beholder bilen til 30. jan ca. 16:45, så alle utleiefirmaene kan brukes. Endre bookingen med en gang, ikke forleng på dagen.</span></li>
-          <li><span><b>Uten forlengelsen:</b> bilen må leveres ca. 07:00 den 28. Da er det bare <b>Nippon Rent-A-Car</b> som har åpent (07:00 nov–mars). Toyota, Nissan, Budget og Orix åpner 08:00.</span></li>
-          <li><span><b>Vil dere absolutt ha SUV:</b> Toyota har Land Cruiser Prado (SUV4) og skiholder for ¥2 200, men da blir det trangt.</span></li>
+          <li><span><b>Hentetiden står på 11:00 den 19. jan,</b> men JAL511 lander 12:00. Møter dere ikke innen 1 time uten å si fra, kansellerer Nippon bookingen. Flytt den til ca. 13:00.</span></li>
+          <li><span><b>Levering 26. jan:</b> bookingen står til 18:00, men bilen leveres før flyene, som går 12:40 og 13:15.</span></li>
         </ul>
       </div>
       <div class="tbl-wrap"><table>
@@ -674,7 +643,7 @@ tr.rec td:first-child{box-shadow:inset 3px 0 0 var(--accent)}
       </table></div>
     </div>
     <div class="grid-3" style="margin-top:20px">
-      <div><p class="eyebrow">Pris (9 døgn, Toyota-tariff)</p><p style="margin-top:6px;font-size:14px">Alphard ca. ¥195 000 (kr 13 600), Hiace Grand Cabin ca. ¥211 000 (kr 14 800), Prado ca. ¥247 000 (kr 17 300). Kommer i tillegg: 4WD og ETC-kort (¥550). Delt på 4 blir det <b>ca. kr 3 400–4 300 per person</b>.</p></div>
+      <div><p class="eyebrow">Pris</p><p style="margin-top:6px;font-size:14px">Står ikke i bekreftelsen fra Nippon Rent-A-Car. Sjekk den på reservasjonssiden deres. Den trekkes fra kortet som ble brukt ved booking, på hente- eller leveringsdagen.</p></div>
       <div><p class="eyebrow">Henting</p><p style="margin-top:6px;font-size:14px">Skrankene er i 1F på innenlandsterminalen. Shuttlebussen tar 10–15 min, og hele hentingen 40–60 min (mer i snøvær). Book henting 13:00–13:30. Vinterdekk er standard og gratis.</p></div>
       <div><p class="eyebrow">Førerkort</p><p style="margin-top:6px;font-size:14px">Japan godtar bare <b>internasjonalt førerkort etter 1949-konvensjonen</b>. Det koster 240 kr (medlem) eller 320 kr hos NAF og tar 10–14 virkedager. Alle sjåfører må ha med førerkortet og passet. Det digitale førerkortet godtas ikke.</p></div>
     </div>
@@ -690,8 +659,6 @@ tr.rec td:first-child{box-shadow:inset 3px 0 0 var(--accent)}
           <tr><td>Furano → Otaru<span class="s">Route 38 til Takikawa, så Dōō Expwy</span></td><td class="num">¥3 590</td><td class="num">2 t 30 m</td><td class="num">3–3,5 t</td></tr>
           <tr><td>Otaru → Sapporo</td><td class="num">¥820</td><td class="num">35–45 m</td><td class="num">ca. 1 t</td></tr>
           <tr><td>Otaru → Chitose</td><td class="num">¥2 250</td><td class="num">55 m</td><td class="num">70–90 m</td></tr>
-          <tr><td>Otaru → Niseko</td><td class="num">–</td><td class="num">1 t 10 m</td><td class="num">1,5–2 t</td></tr>
-          <tr><td>Niseko → Chitose</td><td class="num">–</td><td class="num">2 t 20 m</td><td class="num">3 t+</td></tr>
         </tbody>
       </table></div>
       <p class="tipline" style="margin-top:12px">Hokkaido Expressway Pass lønner seg <b>ikke</b>: bompengene blir ca. ¥10 000 til sammen, mens 8-dagerspasset koster ¥15 400.</p>
@@ -714,47 +681,18 @@ tr.rec td:first-child{box-shadow:inset 3px 0 0 var(--accent)}
 <!-- ================= INNENLANDSFLY ================= -->
 <section class="view" id="v-innenlands" aria-label="Innenlandsfly" hidden>
   <div>
-    <div class="sec-h"><h2>Innenlandsfly</h2><span class="aside">Funn fra research · dobbeltsjekket 11.10.2026</span></div>
-    <p class="lead">Alle billetter for januar 2027 er i salg. Det går over 50 fly om dagen mellom Haneda og New Chitose og 17 mellom Narita og New Chitose. Ingen billett passer alle tre reisedagene: <b>billigst er best 19. jan</b>, og <b>2 × 23 kg som kan endres er best 30. jan</b>.</p>
+    <div class="sec-h"><h2>Innenlandsfly</h2><span class="aside">Booket 2. og 4. nov. 2026</span></div>
+    <p class="lead">Alle innenlandsflyene er booket. Bookingreferansene står i Teams, ikke her, fordi nettsiden er åpen for alle.</p>
   </div>
 
-    <ul class="facts">
-      <li><b>19. jan · Tokyo → Chitose</b>Skiene er sendt, så det holder med en billig billett som ikke kan endres. AIRDO og Skymark koster fra ca. ¥8 600, og et fly før kl. 09 gir dagslys hele veien til Furano.</li>
-      <li><b>26. jan · Torgeir</b>Skibagen er sendt til Narita. Det går 54 fly, så han kan velge et tidlig på ettermiddagen med hvilken som helst billett (AIRDO fra ¥8 595, Skymark ¥8 750, ANA ¥13 050, JAL ¥14 920).</li>
-      <li><b>30. jan · de tre</b>Med ski og koffert, og KL862 dagen etter. ANA Standard eller Flex har 2 × 23 kg og kan endres. Explorer Pass har samme bagasje, men kan ikke endres.</li>
-      <li><b>Flyene planen anbefalte, går ikke</b>JL511 (19. jan), JL524 og ANA 078 (30. jan) finnes ikke i rutene. Tidene under er fra Google Flights 11.10.2026: billigste enveispris per person med skatt.</li>
-    </ul>
-
-  <div class="grid-2" style="align-items:start">
-    <div>
-      <div class="sec-h"><h2>Tir. 19. jan · Haneda → Chitose</h2><span class="aside">53 fly</span></div>
-      <div class="tbl-wrap"><table>
-        <thead><tr><th>Avgang</th><th>Selskap</th><th>Terminal</th><th>Fra</th></tr></thead>
-        <tbody>
-          <tr class="rec"><td class="num">06:45 → 08:20</td><td>Skymark</td><td>T1</td><td class="num">¥8 750</td></tr>
-          <tr class="rec"><td class="num">06:50 → 08:20</td><td>AIRDO</td><td>T2</td><td class="num">¥8 595</td></tr>
-          <tr><td class="num">07:00 → 08:30</td><td>ANA</td><td>T2</td><td class="num">¥13 050</td></tr>
-          <tr><td class="num">07:30 → 09:00</td><td>JAL</td><td>T1</td><td class="num">¥14 920</td></tr>
-          <tr><td class="num">08:15 → 09:45</td><td>AIRDO</td><td>T2</td><td class="num">¥9 530</td></tr>
-        </tbody>
-      </table></div>
-      <p class="muted" style="font-size:12.5px;margin-top:8px">Første fly 06:25 (JAL), siste 21:00 (AIRDO). Fra hotellet til Haneda tar det ca. 50 min med Asakusa-linja.</p>
-    </div>
-    <div>
-      <div class="sec-h"><h2>Lør. 30. jan · Chitose → Haneda</h2><span class="aside">56 fly</span></div>
-      <div class="tbl-wrap"><table>
-        <thead><tr><th>Avgang</th><th>Selskap</th><th>Terminal</th><th>Fra</th></tr></thead>
-        <tbody>
-          <tr><td class="num">17:30 → 19:10</td><td>ANA</td><td>T2</td><td class="num">¥13 050</td></tr>
-          <tr><td class="num">19:10 → 20:55</td><td>Skymark</td><td>T1</td><td class="num">¥9 750</td></tr>
-          <tr class="rec"><td class="num">19:30 → 21:10</td><td>ANA</td><td>T2</td><td class="num">¥13 050</td></tr>
-          <tr class="rec"><td class="num">19:30 → 21:15</td><td>JAL</td><td>T1</td><td class="num">¥14 920</td></tr>
-          <tr><td class="num">21:00 → 22:40</td><td>Skymark</td><td>T1</td><td class="num">¥8 750</td></tr>
-        </tbody>
-      </table></div>
-      <p class="muted" style="font-size:12.5px;margin-top:8px">Første fly 07:30. Siste fly: JAL 21:15, ANA og AIRDO 21:45.</p>
-    </div>
-  </div>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Dag</th><th>Fly</th><th>Strekning</th><th>Hvem</th><th>Billett og bagasje</th></tr></thead>
+    <tbody>
+      <tr><td>Tir. 19. jan</td><td class="num">JAL511<span class="s">10:25 → 12:00</span></td><td>Haneda T1 → New Chitose</td><td>Alle fire</td><td>Special Saver, ¥15 080 per person. 20 kg innsjekket. Kan ikke endres.</td></tr>
+      <tr><td>Tir. 26. jan</td><td class="num">ANA NH2152<span class="s">12:40 → 14:30</span></td><td>New Chitose → Narita T1</td><td>Torgeir</td><td>2 kolli innsjekket.</td></tr>
+      <tr><td>Tir. 26. jan</td><td class="num">JAL3914<span class="s">13:15 → 15:20</span></td><td>New Chitose → Osaka Itami</td><td>Jonas, Jørgen, Terje</td><td>Special Saver, ¥15 060 per person. 20 kg innsjekket. Kan ikke endres.</td></tr>
+    </tbody>
+  </table></div>
 
   <div>
     <div class="sec-h"><h2>Billettyper</h2><span class="aside">Bagasje, endring og frister</span></div>
@@ -762,11 +700,11 @@ tr.rec td:first-child{box-shadow:inset 3px 0 0 var(--accent)}
       <thead><tr><th>Billett</th><th>Bagasje</th><th>Endring</th><th>Kjøp senest</th></tr></thead>
       <tbody>
         <tr><td>JAL Japan Explorer Pass<span class="s">Fra ca. US$94 · bosted utenfor Japan + internasjonal billett</span></td><td>2 × 23 kg. Ski teller som ett kolli.</td><td>Nei. Må avbestilles og kjøpes på nytt, ingen refusjon.</td><td>24 t før</td></tr>
-        <tr><td>JAL Saver / Special Saver</td><td>20 kg totalt, ¥440 per kg over</td><td>Nei</td><td>1 / 28 dager før</td></tr>
+        <tr class="rec"><td>JAL Saver / Special Saver<span class="s">Booket 19. og 26. jan</span></td><td>20 kg totalt, ¥440 per kg over</td><td>Nei</td><td>1 / 28 dager før</td></tr>
         <tr><td>JAL Flex</td><td>20 kg totalt</td><td>Ja, uten gebyr</td><td>Samme dag</td></tr>
         <tr><td>ANA Simple</td><td>1 × 23 kg</td><td>Nei. Avbestilling koster 20–60 %.</td><td>45 / 28 / 1 dag før</td></tr>
-        <tr class="rec"><td>ANA Standard</td><td>2 × 23 kg</td><td>Ja, gebyr 5 / 8 / 10 % (45+ / 44–28 / 27– dager før)</td><td>Dagen før</td></tr>
-        <tr class="rec"><td>ANA Flex</td><td>2 × 23 kg</td><td>Ja, uten gebyr. Avbestilling ¥500.</td><td>Samme dag</td></tr>
+        <tr><td>ANA Standard</td><td>2 × 23 kg</td><td>Ja, gebyr 5 / 8 / 10 % (45+ / 44–28 / 27– dager før)</td><td>Dagen før</td></tr>
+        <tr><td>ANA Flex</td><td>2 × 23 kg</td><td>Ja, uten gebyr. Avbestilling ¥500.</td><td>Samme dag</td></tr>
         <tr><td>Skymark</td><td>20 kg totalt, ski opptil 280 cm. ¥1 000 per 10 kg over.</td><td>–</td><td>–</td></tr>
         <tr><td>Peach Minimum</td><td>Ingen (1. bag ¥2 000). Ski 204 cm eller mer +¥1 900.</td><td>Nei</td><td>–</td></tr>
         <tr><td>Jetstar Starter</td><td>Ingen. Oversize ¥2 500 ved bestilling, maks 2,3 m.</td><td>Nei</td><td>–</td></tr>
@@ -778,34 +716,22 @@ tr.rec td:first-child{box-shadow:inset 3px 0 0 var(--accent)}
 
   <div class="grid-2" style="align-items:start">
     <div>
-      <div class="sec-h"><h2>Flyvalg</h2></div>
-      <ul class="list">
-        <li><span><b>Explorer Pass:</b> fordelen er bagasjen, ikke prisen. US$94 er omtrent det samme som billigste JAL-pris (¥14 920), og dyrere enn AIRDO og Skymark. 19. og 26. jan holder en vanlig billett. 30. jan sparer 2 × 23 kg rundt ¥10 000 i overvekt mot vanlig JAL (43 kg mot 20 kg), men ANA Standard eller Flex gir det samme og kan endres.</span></li>
-        <li><span><b>Narita ↔ Chitose</b> (Peach, Jetstar og ANA, fra ¥6 240) har ingen innsjekket bagasje i billigste billett, og Explorer Pass gjelder ikke. Flyr de tre CTS → NRT 30. jan, slipper de bussen fra Haneda 31. jan.</span></li>
-        <li><span><b>Haneda:</b> terminal 1 har JAL og Skymark, terminal 2 ANA og AIRDO. Gratis buss mellom terminalene ca. hvert 4. min.</span></li>
-        <li><span><b>Bestilling åpner</b> 360 dager før (JAL) og 355 dager før (ANA). Peach og Jetstar har solgt vinterrutene siden august 2026.</span></li>
-      </ul>
-    </div>
-    <div>
       <div class="sec-h"><h2>Snøstorm</h2></div>
       <ul class="list">
         <li><span><b>Kansellerer flyselskapet</b> på grunn av vær, tar JAL ingen gebyr. Dere kan bytte fly innen 30 dager eller få pengene tilbake, uansett billettype.</span></li>
-        <li><span><b>En fleksibel billett</b> lar dere selv flytte flyet frem når det er meldt storm, før noe er kansellert.</span></li>
-        <li><span><b>KL862 er på en egen billett.</b> Går dere glipp av den fordi innenlandsflyet er forsinket, er ikke KLM ansvarlig. Morgenfly 31. jan pluss bussen fra Haneda (65–95 min) rekker knapt innsjekking ca. 12:35.</span></li>
+        <li><span><b>KL862 er på en egen billett.</b> Går dere glipp av den fordi et innenlandsfly eller toget er forsinket, er ikke KLM ansvarlig. Torgeir har en natt på Narita som buffer. De tre bør ha god margin fra Kyoto/Osaka 31. jan.</span></li>
+      </ul>
+    </div>
+    <div>
+      <div class="sec-h"><h2>Ikke bekreftet</h2></div>
+      <ul class="list">
+        <li><span>Hvilken flytype JAL3914 bruker, og hvor lange skibager den tar. Spør JAL før 26. jan.</span></li>
+        <li><span>Hvor mye hvert av Torgeirs 2 kolli kan veie. Det står ikke på billetten.</span></li>
       </ul>
     </div>
   </div>
 
-  <div>
-    <div class="sec-h"><h2>Ikke bekreftet</h2></div>
-    <ul class="list">
-      <li><span>Hva ANA Standard og Flex koster for datoene våre. ANAs bookingside ga systemfeil.</span></li>
-      <li><span>Om JALs værregler gjelder Explorer Pass. Få det bekreftet skriftlig før dere kjøper.</span></li>
-      <li><span>Hvilken flytype hvert JAL-fly bruker, og dermed om 200 cm-grensen gjelder.</span></li>
-    </ul>
-  </div>
-
-  <p class="muted" style="font-size:12.5px">Kilder: <a href="https://www.google.com/travel/flights" target="_blank" rel="noopener">Google Flights (11.10.2026)</a> · <a href="https://www.jal.co.jp/flights/en-us/japan-domestic-routes" target="_blank" rel="noopener">JAL Explorer Pass</a> · <a href="https://www.jal.co.jp/jp/ja/dom/baggage/checked/" target="_blank" rel="noopener">JAL innenriks bagasje</a> · <a href="https://www.jal.co.jp/en/dom/change/irregular_refund.html" target="_blank" rel="noopener">JAL ved kansellering</a> · <a href="https://www.ana.co.jp/en/jp/guide/plan/fare/domestic/simple-standard-flex/" target="_blank" rel="noopener">ANA Simple/Standard/Flex</a> · <a href="https://www.ana.co.jp/en/jp/guide/plan/fare/domestic/charge-list/" target="_blank" rel="noopener">ANA gebyrer</a> · <a href="https://www.airdo.jp/en/plan/fare/list/welcome-hokkaido/" target="_blank" rel="noopener">AIRDO Welcome to HOKKAIDO</a> · <a href="https://www.skymark.co.jp/en/baggage/checked.html" target="_blank" rel="noopener">Skymark bagasje</a> · <a href="https://www.flypeach.com/en/lm/st/w_schedule" target="_blank" rel="noopener">Peach</a> · <a href="https://www.jetstar.com/jp/en/help/oversized-baggage" target="_blank" rel="noopener">Jetstar</a> · <a href="https://tokyo-haneda.com/en/access/travel_between_terminals/" target="_blank" rel="noopener">Haneda terminaler</a></p>
+  <p class="muted" style="font-size:12.5px">Kilder: Bookingbekreftelser fra JAL (2.11.2026) og Torgeirs ANA-billett (4.11.2026) · <a href="https://www.jal.co.jp/flights/en-us/japan-domestic-routes" target="_blank" rel="noopener">JAL Explorer Pass</a> · <a href="https://www.jal.co.jp/jp/ja/dom/baggage/checked/" target="_blank" rel="noopener">JAL innenriks bagasje</a> · <a href="https://www.jal.co.jp/en/dom/change/irregular_refund.html" target="_blank" rel="noopener">JAL ved kansellering</a> · <a href="https://www.ana.co.jp/en/jp/guide/plan/fare/domestic/simple-standard-flex/" target="_blank" rel="noopener">ANA Simple/Standard/Flex</a> · <a href="https://www.ana.co.jp/en/jp/guide/plan/fare/domestic/charge-list/" target="_blank" rel="noopener">ANA gebyrer</a> · <a href="https://www.airdo.jp/en/plan/fare/list/welcome-hokkaido/" target="_blank" rel="noopener">AIRDO Welcome to HOKKAIDO</a> · <a href="https://www.skymark.co.jp/en/baggage/checked.html" target="_blank" rel="noopener">Skymark bagasje</a> · <a href="https://www.flypeach.com/en/lm/st/w_schedule" target="_blank" rel="noopener">Peach</a> · <a href="https://www.jetstar.com/jp/en/help/oversized-baggage" target="_blank" rel="noopener">Jetstar</a> · <a href="https://tokyo-haneda.com/en/access/travel_between_terminals/" target="_blank" rel="noopener">Haneda terminaler</a></p>
 </section>
 
 <!-- ================= BAGASJE ================= -->
@@ -821,24 +747,24 @@ tr.rec td:first-child{box-shadow:inset 3px 0 0 var(--accent)}
       <div class="lh">Sola → Narita<b>15.–16. jan</b></div>
       <div class="lh">Narita → Tokyo<b>16. jan</b></div>
       <div class="lh">Tokyo → Chitose<b>19. jan</b></div>
-      <div class="lh">Hokkaido med bil<b>19.–28. jan</b></div>
+      <div class="lh">Hokkaido med bil<b>19.–26. jan</b></div>
       <div class="lh">Torgeir hjem<b>26.–27. jan</b></div>
-      <div class="lh">De tre hjem<b>30.–31. jan</b></div>
+      <div class="lh">De tre via Osaka<b>26.–31. jan</b></div>
 
       <div class="rh">Skibag<span>ski + staver (+ støvler fra Narita)</span></div>
       <div class="c"><b>Innsjekket, KLM</b><span>Erstatter ett kolli · 23 kg · 300 cm totalt</span></div>
       <div class="c ship"><b>Sendes til Furano</b><span>Yamato ¥5 220 · levering 19.</span></div>
       <div class="c ship"><b>Er underveis</b><span>Står i resepsjonen når dere kommer</span></div>
       <div class="c"><b>I bilen</b><span>Furano → Otaru</span></div>
-      <div class="c ship"><b>Sendt Otaru → Narita</b><span>Yamato Airport TA-Q-BIN 24. jan · hentes på T1</span></div>
-      <div class="c"><b>I bilen, så innsjekket</b><span>JAL CTS → HND · 2 × 23 kg · deretter KLM</span></div>
+      <div class="c"><b>Innsjekket, ANA CTS → NRT</b><span>2 kolli · blir med til hotellet på Narita</span></div>
+      <div class="c"><b>Innsjekket, JAL CTS → ITM</b><span>20 kg per person sammen med kofferten · deretter KLM</span></div>
 
       <div class="rh">Koffert<span>klær, helst myk</span></div>
       <div class="c"><b>Innsjekket, KLM</b><span>Kolli nr. 2: kjøp ekstra kolli hvis billetten bare har ett</span></div>
       <div class="c"><b>Med dere</b><span>Tog til hotellet</span></div>
-      <div class="c"><b>Innsjekket</b><span>2 × 23 kg (Explorer Pass) eller 20 kg (vanlig JAL)</span></div>
+      <div class="c"><b>Innsjekket, JAL511</b><span>20 kg per person (Special Saver)</span></div>
       <div class="c"><b>I bilen</b><span></span></div>
-      <div class="c"><b>Innsjekket, CTS → HND</b><span>Eller send den med skibagen</span></div>
+      <div class="c"><b>Innsjekket, CTS → NRT</b><span>Kolli nr. 2 på ANA-billetten</span></div>
       <div class="c"><b>Innsjekket</b><span>Samme som skibagen</span></div>
 
       <div class="rh last">Håndbagasje<span>sekk</span></div>
@@ -846,14 +772,14 @@ tr.rec td:first-child{box-shadow:inset 3px 0 0 var(--accent)}
       <div class="c last"><b>Flytt støvlene over i skibagen</b><span>Før den sendes (Yamato priser alt-i-ett-bag som ski)</span></div>
       <div class="c last"><b>Sekk</b><span>Kofferten kan sendes 17. jan, så flyr dere med bare sekk</span></div>
       <div class="c last"><b>Sekk</b><span></span></div>
-      <div class="c last"><b>Sekk</b><span>Torgeir reiser lett</span></div>
+      <div class="c last"><b>Sekk</b><span></span></div>
       <div class="c last"><b>Sekk</b><span></span></div>
     </div>
   </div>
 
   <div class="callout">
     <span class="ic">OBS</span>
-    <div><b>Ski kan ikke sendes fra nærbutikk.</b> Yamato sluttet å ta imot ski i konbini 19. nov. 2024. Send fra en Yamato-skranke, et Yamato-kontor eller med henting fra hotellet. Dette gjelder først og fremst Torgeirs sending fra Otaru.</div>
+    <div><b>Ski kan ikke sendes fra nærbutikk.</b> Yamato sluttet å ta imot ski i konbini 19. nov. 2024. Send fra en Yamato-skranke, et Yamato-kontor eller med henting fra hotellet. Det gjelder også hvis dere sender skiene fra Otaru.</div>
   </div>
 
   <div class="grid-2" style="align-items:start">
@@ -885,8 +811,8 @@ tr.rec td:first-child{box-shadow:inset 3px 0 0 var(--accent)}
   <div>
     <div class="sec-h"><h2>Hjemreisen</h2></div>
     <div class="grid-2" style="gap:14px">
-      <div class="box"><div class="k">Torgeir, 24.–27. jan</div>Søn. 24. jan, etter skidagen i Kiroro, sender du skibagen (og gjerne kofferten) fra resepsjonen i Otaru til Narita T1 med Yamato Airport TA-Q-BIN. Det koster ca. ¥5 220, pluss ¥660 i flyplassgebyr. Bagen må være på Narita 26., dagen før flyet. Yamato krever levering 2 dager før (3 i enkelte områder), så be resepsjonen sjekke om den må sendes allerede lør. 23. Fly til Haneda 26., sov i Tokyo, ta Keisei Access Express til Narita 27. og hent bagen på Yamato-skranken i T1 før KLM-innsjekkingen stenger ca. 12:35.</div>
-      <div class="box"><div class="k">Jonas, Jørgen, Terje</div>Dere sender ingenting. Alt ligger i bilen til Niseko og tilbake til Chitose. Sjekk inn ski og koffert på JAL CTS → HND 30. jan (2 × 23 kg), og ta Limousine Bus til Narita 31. jan for KLM.</div>
+      <div class="box"><div class="k">Torgeir, 26.–27. jan</div>Du sender ingenting. Skibag og koffert ligger i bilen til Chitose og sjekkes inn på ANA NH2152 til Narita (billetten har 2 kolli). De blir med til Hotel Nikko Narita, og shuttlebussen tar deg og bagasjen til terminal 1 den 27. KLM-innsjekkingen stenger ca. 12:35.</div>
+      <div class="box"><div class="k">Jonas, Jørgen, Terje</div>Ski og koffert ligger i bilen til Chitose og sjekkes inn på JAL3914 til Osaka 26. jan. Special Saver har bare 20 kg per person, så regn med overvekt (se Billettyper under <a href="#innenlands" data-goto="innenlands">Innenlandsfly</a>). Vil dere slippe skiene i Kyoto/Osaka, kan dere sende dem fra Otaru til Narita med Yamato Airport TA-Q-BIN. Spør resepsjonen om de kan vente på Narita til 31. jan.</div>
     </div>
   </div>
 
@@ -899,7 +825,7 @@ tr.rec td:first-child{box-shadow:inset 3px 0 0 var(--accent)}
         <li><span><b>Merk alt</b> med navn og japansk telefonnummer eller e-post, og ta bilde av innholdet.</span></li>
         <li><span><b>Tokyo-varianten:</b> send også kofferten fra hotellresepsjonen 17. jan (Yamato 160: ¥3 630). Den kommer frem 19., så dere flyr til Chitose med bare sekk. Pakk sekken for to netter.</span></li>
         <li><span><b>Lagring på Narita</b> er vurdert og forkastet: ca. ¥6 000–8 000 per bag for 16.–19. jan (skap i T3 ¥1 200 per 12 t, JAL ABC ¥2 000 per døgn), og dere må tilbake til Narita. Frakt koster ¥3 430–5 220.</span></li>
-        <li><span><b>Snøstorm:</b> Yamato kan bli en dag forsinket. Det rekker ut til Furano, men ikke for Torgeirs hjemsending.</span></li>
+        <li><span><b>Snøstorm:</b> Yamato kan bli en dag forsinket. Det rekker ut til Furano.</span></li>
       </ul>
     </div>
     <div>
@@ -912,7 +838,7 @@ tr.rec td:first-child{box-shadow:inset 3px 0 0 var(--accent)}
   <div>
     <div class="sec-h"><h2>Ikke bekreftet</h2></div>
     <ul class="list">
-      <li><span>Om Otaru er et område der Yamato trenger 3 dager (det påvirker Torgeirs sending).</span></li>
+      <li><span>Om Otaru er et område der Yamato trenger 3 dager, hvis dere sender skiene derfra.</span></li>
     </ul>
   </div>
 
@@ -941,7 +867,7 @@ tr.rec td:first-child{box-shadow:inset 3px 0 0 var(--accent)}
     </div>
 
     <div class="place" style="--c:var(--travel)">
-      <div><div class="kj" lang="ja">北海道</div><h3>Hokkaido</h3><p class="sub">19.–28. (31.) januar</p></div>
+      <div><div class="kj" lang="ja">北海道</div><h3>Hokkaido</h3><p class="sub">19.–26. januar</p></div>
       <ul class="facts">
         <li><b>Stor og tom</b>Hokkaido har 22 % av Japans areal, men bare ca. 4 % av befolkningen (4,99 mill.). Øya er omtrent like stor som Østerrike.</li>
         <li><b>Ezo</b>Øya var ainu-folkets land og het Ezo helt til 1869.</li>
@@ -973,7 +899,7 @@ tr.rec td:first-child{box-shadow:inset 3px 0 0 var(--accent)}
     </div>
 
     <div class="place" style="--c:var(--otaru)">
-      <div><div class="kj" lang="ja">小樽</div><h3>Otaru</h3><p class="sub">21.–28. januar</p></div>
+      <div><div class="kj" lang="ja">小樽</div><h3>Otaru</h3><p class="sub">21.–26. januar</p></div>
       <ul class="facts">
         <li><b>Nordens Wall Street</b>Sildeboomen fylte gatene med banker på 1910–30-tallet. Bank of Japan-filialen fra 1912 er i dag museum.</li>
         <li><b>Kanalen som buer</b>Kanalen fra 1923 ble bygget på utfylt land. Halvparten ble fylt igjen i 1986, og samtidig kom de 63 gasslyktene.</li>
@@ -991,16 +917,6 @@ tr.rec td:first-child{box-shadow:inset 3px 0 0 var(--accent)}
         <li><b>OL 1972</b>Det første vinter-OL i Asia. Japan tok alle tre medaljene i normalbakken, og det var landets første vinter-gull.</li>
         <li><b>Miso-ramen og suppecurry</b>Miso-ramen ble oppfunnet ved Aji no Sanpei på 1950-tallet, og suppecurryen kommer fra kafeen Ajanta i 1971.</li>
         <li><b>Susukino</b>Kjent for Nikka-neonen «King of Blenders» og ramen-smugene. Strøket var forbilde for «Tsukimino» i Yakuza 5.</li>
-      </ul>
-    </div>
-
-    <div class="place" style="--c:var(--niseko)">
-      <div><div class="kj" lang="ja">ニセコ</div><h3>Niseko</h3><p class="sub">Forlengelsen · 28.–30. januar</p></div>
-      <ul class="facts">
-        <li><b>Ezo Fuji</b>Vulkanen Yōtei (1 898 m) ligger rett overfor bakken og kalles «Hokkaidos Fuji».</li>
-        <li><b>14 meter</b>I sesongen 2022/23 falt det 14 m snø ved midtstasjonen, og 5 m av det bare i januar.</li>
-        <li><b>1912</b>Den østerrikske offiseren Theodor von Lerch tok med skisporten hit.</li>
-        <li><b>Hvorfor så mye engelsk?</b>Australiere «oppdaget» Niseko på 1990-tallet, og etter 2001 tok det helt av.</li>
       </ul>
     </div>
 
@@ -1039,13 +955,13 @@ bases:{
   tokyo:{name:"Tokyo",kj:"東京",c:"--tokyo"},
   furano:{name:"Furano",kj:"富良野",c:"--furano"},
   otaru:{name:"Otaru",kj:"小樽",c:"--otaru"},
-  niseko:{name:"Niseko",kj:"ニセコ",c:"--niseko"}
+  kansai:{name:"Kyoto/Osaka",kj:"関西",c:"--ext"}
 },
 nextNote:"KL1176 til Amsterdam går 11:50. Sjekk inn koffert og skibag. Skistøvlene tar dere i håndbagasjen.",
 stats:{
   main:[{v:"13",k:"dager"},{v:"11",k:"hotellnetter"},{v:"3",k:"skidager (2 Furano + Kiroro)"},{v:"6",k:"flyvninger"}],
-  ext:[{v:"17",k:"dager"},{v:"15",k:"hotellnetter"},{v:"6",k:"skidager (Furano, Kiroro, Niseko)"},{v:"6",k:"flyvninger"}],
-  extAdd:["+4 for tre","+4 for tre","+3 i Niseko",""]
+  ext:[{v:"17",k:"dager"},{v:"15",k:"hotellnetter"},{v:"3",k:"skidager (2 Furano + Kiroro)"},{v:"6",k:"flyvninger"}],
+  extAdd:["+4 for tre","+4 for tre","",""]
 },
 weather:[
   {b:"tokyo",name:"Tokyo",hi:10,lo:1,note:"Tørt og solrikt. Sola går ned 16:51."},
@@ -1062,52 +978,50 @@ travelTimes:[
   {name:"I Japan",legs:[
     {a:"Narita → hotellet",how:"Keisei Access Express eller JR Sobu Rapid",min:75,b:"tokyo",approx:1},
     {a:"Hotellet → Haneda",how:"Asakusa-linja direkte",min:50,b:"tokyo",approx:1},
-    {a:"Haneda → New Chitose",how:"Fly, f.eks. JAL 10:00 eller AIRDO 10:15",min:95,b:"travel"},
+    {a:"Haneda → New Chitose",how:"JAL511 · 10:25–12:00",min:95,b:"travel"},
     {a:"Chitose → Furano",how:"Bil · 2,5–3 t på vinterføre",min:140,b:"furano",approx:1},
     {a:"Furano → Blue Pond",how:"Bil · Shirahige-fossen ligger 5 min lenger",min:35,b:"furano",approx:1},
     {a:"Furano → Otaru",how:"Bil · 3–3,5 t på vinterføre",min:165,b:"otaru",approx:1},
     {a:"Otaru → Sapporo",how:"JR-tog, 32–45 min",min:40,b:"otaru",approx:1},
     {a:"Otaru → New Chitose",how:"Bil 55–90 min · JR Rapid Airport 73 min",min:75,b:"otaru",approx:1}
   ]},
-  {name:"Forlengelse · Jonas, Jørgen, Terje",ext:1,legs:[
-    {a:"Otaru → Niseko (Hirafu)",how:"Bil via Yoichi · 1 t 10 m på bar vei",min:100,b:"niseko",approx:1},
-    {a:"Niseko → New Chitose",how:"Bil · regn 3 t på vinterføre",min:180,b:"niseko",approx:1},
-    {a:"Haneda → Narita",how:"Limousine Bus, 65–95 min",min:80,b:"travel",approx:1}
+  {name:"Kyoto/Osaka · Jonas, Jørgen, Terje",ext:1,legs:[
+    {a:"New Chitose → Osaka Itami",how:"JAL3914 · 26. jan 13:15–15:20",min:125,b:"travel"}
   ]},
   {name:"Hjem · KLM fra Narita",legs:[
-    {a:"Torgeir: Higashi-Kanda → Narita",how:"Keisei Access Express, 27. jan",min:75,b:"tokyo",approx:1},
+    {a:"Torgeir: New Chitose → Narita",how:"ANA NH2152 · 26. jan 12:40–14:30",min:110,b:"travel"},
+    {a:"Torgeir: Hotel Nikko Narita → terminal 1",how:"Hotellets shuttlebuss, 27. jan",min:15,b:"tokyo",approx:1},
     {a:"Tokyo Narita → Amsterdam",how:"KLM KL862 · 13:35–19:40",min:845,b:"travel"},
     {a:"Amsterdam → Stavanger",how:"KLM KL1183 · 21:10–22:40",min:90,b:"travel"},
     {a:"Hele reisen",how:"Narita 13:35 → Sola 22:40 samme dag",min:1025,b:"travel"}
   ]}
 ],
 todo:[
-  {id:"nisekopark",what:"Niseko Park Hotel: vinterbookingen åpner",when:"1. okt",hot:1,ext:1,sub:"Kl. 10:00 japansk tid = 03:00 norsk tid. Gjelder Jonas, Jørgen og Terje."},
-  {id:"hotels",what:"Book hotell i Furano og Otaru",when:"Nå",hot:1,sub:"Hotel Edel Warme i Furano 19.–21. jan (2 netter) og Dormy Inn Premium Otaru 21.–28. jan (7 netter). Si fra til hotellet i Otaru at dere kommer sent 21. jan. Torgeir trenger også hotell i Tokyo 26.–27. jan."},
-  {id:"car",what:"Leiebil på Chitose: Hiace eller Alphard, 4WD",when:"Fra ~19. okt",hot:1,sub:"Toyota åpner bookingen 3 mnd før. Med forlengelsen leveres bilen 30. jan, ellers 28. kl. 07:00 (bare Nippon har åpent så tidlig)."},
-  {id:"dom",what:"Innenlandsfly: HND→CTS 19. jan, tilbake 26./30. jan",when:"Okt–nov",sub:"JAL Japan Explorer Pass har 2 × 23 kg bagasje inkludert. Torgeir flyr CTS→HND 26. jan, de tre 30. jan."},
+  {id:"bilhenting",what:"Flytt hentetiden på leiebilen til ca. 13:00",when:"Nå",hot:1,sub:"Nippon Rent-A-Car står på 11:00 den 19. jan, men JAL511 lander 12:00. Møter dere ikke innen 1 time uten å si fra, kansellerer de bookingen."},
+  {id:"hotels",what:"Book hotell i Furano og Otaru",when:"Nå",hot:1,sub:"Hotel Edel Warme i Furano 19.–21. jan (2 netter) og Dormy Inn Premium Otaru 21.–26. jan (5 netter). Si fra til hotellet i Otaru at dere kommer sent 21. jan."},
+  {id:"kansai",what:"Kyoto/Osaka: overnatting og reisen til Narita",when:"Før avreise",ext:1,sub:"Jonas, Jørgen og Terje lander på Osaka Itami 26. jan. KL862 går fra Narita 13:35 den 31. jan, og innsjekkingen stenger ca. 12:35."},
   {id:"klmbag",what:"Sjekk at KLM-billetten har innsjekket bagasje",when:"Nå",sub:"Skibagen erstatter ett kolli. Koffert og skibag betyr ekstra kolli, som er billigst på nett minst 24 t før."},
   {id:"idp",what:"Internasjonalt førerkort (1949-modellen)",when:"Nov–des",sub:"NAF: 240 kr for medlemmer, 320 kr ellers. Tar 10–14 virkedager. Alle som skal kjøre trenger det."},
   {id:"sumo",what:"Sumobilletter til Hatsu Basho (17. eller 18. jan)",when:"5. des 02:00",hot:1,sub:"Salget åpner kl. 10:00 japansk tid på sumo.pia.jp. Turneringen i 2026 ble utsolgt."},
-  {id:"nikka",what:"Nikka Yoichi-omvisning 26. jan (valgfritt)",when:"29. des",sub:"Bookingen åpner 4 uker før. Omvisningen er bare på japansk."},
+  {id:"nikka",what:"Nikka Yoichi-omvisning 22. jan (valgfritt)",when:"25. des",sub:"Bookingen åpner 4 uker før. Omvisningen er bare på japansk."},
   {id:"sky",what:"Shibuya Sky 16. jan kl. 20:00",when:"2. jan",sub:"Billettene legges ut 14 dager før."},
   {id:"teamlab",what:"teamLab Planets (valgfritt, 18. jan kveld)",when:"Des–jan",sub:"Det selges ikke billetter på stedet, så book 1–3 uker før."},
-  {id:"ins",what:"Reiseforsikring: ski utenfor løype og egenandel på leiebil",when:"Før avreise",sub:"Porter til offpist i Niseko krever hjelm og skredsender."},
+  {id:"ins",what:"Reiseforsikring: ski utenfor løype og egenandel på leiebil",when:"Før avreise",sub:"Sjekk at offpist og egenandel på leiebilen er dekket."},
   {id:"vjw",what:"Visit Japan Web: QR-kode for innreise og toll",when:"Uka før",sub:"Sparer tid i køen på Narita."}
 ],
 budget:{
   rows:[
     ["Hotell Tokyo, 3 netter","Comfort Hotel ERA Tokyo Higashi Kanda (booket)","3 700–5 800"],
     ["Hotell Furano, 2 netter","Hotel Edel Warme, 2 × twin (anslag, pris ikke sjekket)","1 600–3 150"],
-    ["Hotell Otaru, 7 netter","Dormy Inn Premium Otaru · Torgeir: 5 netter + 1 i Tokyo (anslag, pris ikke sjekket)","4 250–7 350"],
-    ["Leiebil, 9 døgn","Inkl. bompenger og drivstoff, delt på 4","3 900–4 300"],
+    ["Hotell Otaru, 5 netter","Dormy Inn Premium Otaru (anslag, pris ikke sjekket) · Torgeir: + 1 natt på Narita","3 050–5 250"],
+    ["Leiebil, 7 døgn","Nippon Rent-A-Car (pris ikke sjekket), inkl. bompenger og drivstoff, delt på 4","3 050–3 350"],
     ["Heiskort, 3 dager","2 i Furano + 1 i Kiroro","1 650–1 800"],
-    ["Innenlandsfly × 2","Explorer Pass eller lavpris","1 700–2 500"],
+    ["Innenlandsfly × 2","JAL511 ¥15 080 + JAL3914 ¥15 060 (booket) · Torgeir: JAL511 + ANA NH2152","2 100"],
     ["Bagasjeforsendelse","Skibag Narita → Furano, evt. hjem","250–650"]
   ],
-  sum:"17 050–25 550",
-  ext:"+ 6 800–8 800",
-  extNote:"Niseko 2 netter, Haneda 1 natt, 2 ekstra bildøgn, 3-dagers heiskort (¥39 500) og buss til Narita."
+  sum:"15 400–22 100",
+  ext:"–",
+  extNote:"Kyoto/Osaka 26.–31. jan, med overnatting og reisen til Narita, er ikke planlagt ennå."
 },
 days:[
 {date:"2027-01-15",base:"travel",move:1,kj:"出発",seg:"Avreise",title:"Avreise fra Sola",place:"Stavanger → Amsterdam → Tokyo",sleep:"På flyet",travel:"15 t 50 m til Narita",
@@ -1157,7 +1071,7 @@ days:[
   {t:"15:00",w:"Shinjuku",n:"Gratis utsikt fra rådhuset (Tocho), 202 m. Om kvelden: Omoide Yokocho (grillspyd) og Golden Gai (bitte små barer)."},
   {t:"18:30",w:"Projeksjonsshow på Tocho-bygget",n:"Guinness-rekord for verdens største projeksjon. Vises hver kveld.",opt:1},
   {t:"19:30",w:"teamLab Planets (Toyosu)",n:"Flyttet fra 19. jan. Dere går barfot i knehøyt vann, og runden tar ca. 2 timer. Sjekk kveldsåpningen og book tid på forhånd.",opt:1},
-  {t:"Kveld",w:"Pakk til Hokkaido",n:"Dere drar fra hotellet kl. 07:00 i morgen. Legg varmt tøy øverst i kofferten."}
+  {t:"Kveld",w:"Pakk til Hokkaido",n:"Dere drar fra hotellet kl. 08:15 i morgen. Legg varmt tøy øverst i kofferten."}
  ],
  tip:"teamLab, Ginza og Tokyo stasjon lå på 19. jan, som nå er reisedag. Ginza og Tokyo stasjon passer søndag kveld etter Skytree, og teamLab kan tas i kveld i stedet for Shinjuku-kvelden.",
  fact:"Skogen rundt Meiji Jingu er menneskeskapt: ca. 100 000 trær av 365 arter ble gitt fra hele Japan og plantet av 110 000 frivillige i 1920. Shinjuku er verdens travleste stasjon, med 2,7 mill. reisende om dagen."},
@@ -1165,15 +1079,15 @@ days:[
 {date:"2027-01-19",base:"furano",move:1,seg:"Reise",title:"Til Hokkaido",place:"Haneda → Chitose → Furano",sleep:"<a href='https://maps.app.goo.gl/tJvPD35uXfmBsq886' target='_blank' rel='noopener'>Hotel Edel Warme</a>",wx:"−4° / −14° · mørkt 16:30",travel:"Fly 1 t 35 m + bil 2,5–3 t",
  intro:"Fly nordover, hent bilen og kjør inn i snøen. Det blir mørkt før dere er fremme, men Ningle Terrace i Furano-sonen er lyssatt om kvelden og en kort kjøretur fra hotellet.",
  items:[
-  {t:"07:00",w:"Hotellet → Haneda",n:"Gå 9 min til Higashi-Nihombashi og ta Asakusa-linja direkte til Haneda, ca. 40 min og ca. ¥600. Det er rushtid. Med et fly kl. 10:15 holder det å dra ca. 08:00."},
-  {t:"10:15",w:"Haneda → New Chitose",n:"For eksempel JAL 10:00–11:35 (terminal 1) eller AIRDO 10:15–11:45 (terminal 2). Det går 53 fly denne dagen, det første 06:25."},
-  {t:"12:00",w:"Lunsj på Ramen Dojo",n:"Ti ramenrestauranter i 3. etasje på innenlandsterminalen, med miso-ramen fra Sapporo."},
-  {t:"12:30",w:"Hent leiebilen",n:"Skrankene er i 1F. Shuttlebussen til kontoret tar 10–15 min, og hele prosessen 40–60 min. Regn med å kjøre ca. kl. 13:30."},
-  {t:"15:30",w:"Fremme i Furano",n:"Dōtō Expressway til Shimukappu IC (¥2 480), så Route 237 nordover. På vinterføre er dere realistisk fremme 16:00–16:30."},
+  {t:"08:15",w:"Hotellet → Haneda",n:"Gå 9 min til Higashi-Nihombashi og ta Asakusa-linja direkte til Haneda, ca. 40 min og ca. ¥600. Det er rushtid, så vær i terminal 1 senest ca. 09:30."},
+  {t:"10:25",w:"JAL511 Haneda → New Chitose",n:"Booket for alle fire. Går fra terminal 1 og lander 12:00. Special Saver kan ikke endres."},
+  {t:"12:15",w:"Lunsj på Ramen Dojo",n:"Ti ramenrestauranter i 3. etasje på innenlandsterminalen, med miso-ramen fra Sapporo."},
+  {t:"13:00",w:"Hent leiebilen",n:"Nippon Rent-A-Car, skranken er i 1F. Bookingen står på 11:00, så flytt den til ca. 13:00 før dere reiser. Shuttlebussen til kontoret tar 10–15 min, og hele prosessen 40–60 min. Regn med å kjøre ca. kl. 14:00."},
+  {t:"16:30",w:"Fremme i Furano",n:"Dōtō Expressway til Shimukappu IC (¥2 480), så Route 237 nordover. På vinterføre er dere realistisk fremme 16:30–17:00."},
   {t:"18:30",w:"Ningle Terrace",n:"Ca. 15 håndverkshytter i skogen ved Shin Furano Prince, ca. 2,5 km fra Hotel Edel Warme. Lyssatt om kvelden, åpent til 20:45, gratis."},
   {t:"19:30",w:"Middag",n:"Prøv Furano omu-curry, byens egen rett. Kitanomine-landsbyen har flest restauranter og barer.",opt:1}
  ],
- bag:"Kofferten sjekkes inn på innenlandsflyet: 2 × 23 kg med JAL Explorer Pass, 20 kg med vanlig JAL-billett. Skibagene står klare i resepsjonen i Furano.",
+ bag:"Kofferten sjekkes inn på JAL511, med 20 kg per person. Skibagene står klare i resepsjonen i Furano.",
  tip:"Fyll tanken før dere forlater motorveien. Se opp for hjort i skumringen. Northern Road Navi (på engelsk) viser veimeldinger.",
  fact:"«Ningle» er 15 cm høye skogsfolk i fortellingene til Kuramoto Sō, som også skrev TV-serien «Kita no Kuni kara» som gjorde Furano berømt."},
 
@@ -1207,9 +1121,11 @@ days:[
  intro:"En rolig dag etter kjøreturen. Sentrum er lite nok til å gå over alt.",
  items:[
   {t:"10:00",w:"Kanalen og Sakaimachi-dori",n:"Glassbutikker, Musikkboksmuseet med dampklokka, og Kitaichi Hall, som bare lyses av oljelamper."},
+  {t:"14:00",w:"Nikka Yoichi-destilleriet",n:"Flyttet fra 26. jan, som nå er reisedag. 30 min med tog. Omvisningen er gratis, men bare på japansk, og bookes 4 uker før. Museet og smakebaren er åpne 9:15–16:15 uten booking.",opt:1},
   {t:"18:00",w:"Onsen",n:"Naturlig onsen på Dormy Inn."},
   {t:"18:30",w:"Sushi på Sushiya-dori",n:"15–20 sushibarer på én gate. Otaru er kjent for sjømaten."}
  ],
+ book:"Nikka-omvisningen: bookingen åpner 4 uker før, altså 25. desember.",
  fact:"På 1910–30-tallet var Otaru «Nordens Wall Street», med gate etter gate med banker. Kanalen fra 1923 buer fordi den ble bygget på utfylt land."},
 
 {date:"2027-01-23",base:"otaru",title:"Teine eller skihopp i Okurayama",place:"Sapporo Teine · Okurayama",sleep:"<a href='https://maps.app.goo.gl/CUrrxzJcovkTxj4u9' target='_blank' rel='noopener'>Dormy Inn Premium Otaru</a>",wx:"−1° / −6°",travel:"Bil ca. 40 min hver vei",
@@ -1228,8 +1144,7 @@ days:[
   {t:"09:00",w:"Ski i Kiroro",n:""},
   {t:"Heldag",w:"Alternativ: World Cup i skihopp i Okurayama",n:"Andre hoppdag, hvis dere ikke rakk det i går.",opt:1},
   {t:"18:00",w:"Onsen og middag",n:"Naturlig onsen på Dormy Inn."}
- ],
- bag:"<b>Torgeir:</b> etter skidagen sender du skibagen (og gjerne kofferten) fra resepsjonen til Narita med Yamato Airport TA-Q-BIN. Den må komme frem dagen før flyet (26. jan). Yamato krever levering 2 dager før (3 i enkelte områder), og flyplassgebyret er ¥660. Be resepsjonen bekrefte at den rekker frem."},
+ ]},
 
 {date:"2027-01-25",base:"otaru",title:"Dagstur til Sapporo",place:"Otaru → Sapporo",sleep:"<a href='https://maps.app.goo.gl/CUrrxzJcovkTxj4u9' target='_blank' rel='noopener'>Dormy Inn Premium Otaru</a>",wx:"−1° / −6°",travel:"JR-tog 32–45 min hver vei",
  intro:"Ta toget. En Hiace er rundt 2 m høy og passer ikke i parkeringshusene i Sapporo.",
@@ -1241,93 +1156,62 @@ days:[
  ],
  fact:"Sapporo er Japans eldste ølmerke (1876). Miso-ramen ble oppfunnet her på 1950-tallet, og OL i 1972 var det første vinter-OL i Asia."},
 
-{date:"2027-01-26",base:"otaru",title:"Nikka Yoichi og Otaru · Torgeir til Tokyo",place:"Otaru · Yoichi",sleep:"<a href='https://maps.app.goo.gl/CUrrxzJcovkTxj4u9' target='_blank' rel='noopener'>Dormy Inn Premium Otaru</a> · Torgeir: Tokyo",wx:"−1° / −6°",
- tor:{base:"tokyo",move:1,seg:"Reise",title:"Til Tokyo",wx:"10° / 1°",book:"",place:"Otaru → Chitose → Haneda",sleep:"<a href='https://maps.app.goo.gl/wnUPa3JKz82dDyAF6' target='_blank' rel='noopener'>Comfort Hotel ERA Tokyo Higashi Kanda</a> <span class='muted'>(forslag)</span>",travel:"Tog 73 min + fly ca. 1 t 35 m",intro:"Siste morgen i Otaru. Fly til Tokyo på ettermiddagen, og ta en siste kveld i byen."},
- intro:"Whisky om formiddagen og byen om ettermiddagen. Ta toget, så slipper noen å kjøre. Torgeir drar til Tokyo i dag.",
+{date:"2027-01-26",base:"kansai",move:1,seg:"Reise",title:"Fra Hokkaido · Torgeir til Narita, de tre til Osaka",place:"Otaru → New Chitose → Narita / Osaka",sleep:"Torgeir: <a href='https://www.google.com/maps/search/?api=1&query=Hotel+Nikko+Narita' target='_blank' rel='noopener'>Hotel Nikko Narita</a> · Jonas, Jørgen, Terje: Kyoto/Osaka (ikke booket)",travel:"Bil 70–90 min + fly",
+ tor:{base:"tokyo",kj:"成田",title:"Til Narita",place:"Otaru → New Chitose → Narita",sleep:"<a href='https://www.google.com/maps/search/?api=1&query=Hotel+Nikko+Narita' target='_blank' rel='noopener'>Hotel Nikko Narita</a>",travel:"Bil 70–90 min + fly 1 t 50 m",intro:"Siste kveld i Japan. Kjør sammen med de andre til New Chitose, fly til Narita og ta en rolig kveld i Narita by. Kveldsplanen er Torgeirs egen.",bag:"Skibag og koffert sjekkes inn på NH2152 (billetten har 2 kolli) og blir med til hotellet.",tip:"Snøstorm er en reell risiko. 25.–26. jan 2026 ble ca. 7 000 reisende sittende fast på Chitose. Du har en natt på Narita som buffer før KL862."},
+ intro:"Alle forlater Hokkaido i dag. Dere kjører sammen til New Chitose og leverer bilen. Torgeir flyr til Narita og de tre til Osaka.",
  items:[
-  {t:"10:00",w:"Nikka Yoichi-destilleriet",who:"ext",n:"30 min med tog. Omvisningen er gratis, men bare på japansk, og bookes 4 uker før. Museet og smakebaren er åpne 9:15–16:15 uten booking."},
-  {t:"11:00",w:"Sjekk ut og ta toget til New Chitose",who:"torgeir",n:"JR Rapid Airport fra JR Otaru tar ca. 73 min, og stasjonen ligger like ved Dormy Inn. Velg et tog som er fremme minst 1 time før flyet."},
-  {t:"14:00",w:"New Chitose → Haneda",who:"torgeir",n:"JAL, ANA og AIRDO flyr hele dagen, ca. 1 t 35 m. Med JAL Explorer Pass er 2 × 23 kg inkludert."},
-  {t:"14:00",w:"Glass og musikkbokser",who:"ext",n:"Kitaichi Glass, Musikkboksmuseet og dampklokka i Sakaimachi-dori."},
-  {t:"16:00",w:"Haneda → hotellet",who:"torgeir",n:"Asakusa-linja direkte til Higashi-Nihombashi, ca. 40 min. Ta utgang B4 og gå 9 min."},
-  {t:"18:00",w:"Sushi eller izakaya",who:"ext",n:"Prøv en annen sushibar på Sushiya-dori enn første kveld."},
-  {t:"Kveld",w:"Siste kveld i Tokyo",who:"torgeir",n:"Akihabara er 10 min å gå fra hotellet, og Asakusa er 3 stopp unna med Asakusa-linja.",opt:1}
+  {t:"09:00",w:"Sjekk ut og kjør til New Chitose",n:"70–90 min på vinterføre og ¥2 250 i bom. Fyll tanken før dere leverer bilen."},
+  {t:"10:30",w:"Lever leiebilen",n:"Nippon Rent-A-Car på New Chitose. Shuttlebussen til terminalen tar 10–15 min."},
+  {t:"12:40",w:"ANA NH2152 New Chitose → Narita",who:"torgeir",n:"Lander 14:30 på terminal 1. Billetten har 2 kolli innsjekket."},
+  {t:"13:15",w:"JAL3914 New Chitose → Osaka Itami",who:"ext",n:"Booket for Jonas, Jørgen og Terje. Lander 15:20. Special Saver kan ikke endres."},
+  {t:"16:00",w:"Innsjekk på Hotel Nikko Narita",who:"torgeir",n:"Lever fra deg ski og bagasje, og ta en kort pause."},
+  {t:"16:30",w:"Taxi til Naritasan Omotesando",who:"torgeir",n:"Ca. 10–15 min. Tog via flyplassen går også, men taxi er enklest."},
+  {t:"17:00",w:"Naritasan Omotesando",who:"torgeir",n:"Tradisjonell gate med restauranter, suvenirbutikker og små tehus. Smak lokale snacks og kjøp de siste suvenirene. Stemningen blir ekstra fin mot kvelden."},
+  {t:"18:30",w:"Naritasan Shinshoji",who:"torgeir",n:"Et av Japans mest kjente buddhisttempler, og stemningsfullt om kvelden når det er mindre folk. Ta en rolig tur gjennom parken bak tempelet."},
+  {t:"19:30",w:"Middag",who:"torgeir",n:"Unagi (grillet ål), som Narita er kjent for, sushi som siste japanske middag, eller izakaya."},
+  {t:"21:00",w:"Kaffe eller en siste japansk øl",who:"torgeir",n:"Ta taxi tilbake til hotellet ca. 21:30, og pakk ferdig."},
+  {t:"Kveld",w:"Kyoto/Osaka",who:"ext",n:"Overnatting er ikke booket ennå."}
  ],
- bag:"<b>Torgeir:</b> skibagen er sendt til Narita. Kofferten sjekkes inn på flyet til Haneda, eller sendes sammen med skibagen så du reiser med bare sekk.",
- book:"Nikka-omvisningen: bookingen åpner 4 uker før, altså 29. desember.",
- fact:"Nikka-gründeren Masataka Taketsuru lærte å lage whisky i Skottland, giftet seg med skotske Rita Cowan og valgte Yoichi i 1934 fordi stedet minnet ham om Skottland."},
+ bag:"<b>Torgeir:</b> skibag og koffert sjekkes inn på NH2152 (2 kolli).<br><b>Jonas, Jørgen, Terje:</b> JAL3914 har 20 kg per person, så skibag og koffert gir fort overvekt. Se <a href='#bagasje' data-goto='bagasje'>Bagasje</a> for alternativet å sende skiene til Narita.",
+ tip:"Snøstorm er en reell risiko. 25.–26. jan 2026 ble ca. 7 000 reisende sittende fast på Chitose. Billettene kan ikke endres, men kansellerer JAL på grunn av vær, kan dere bytte fly eller få pengene tilbake uten gebyr."},
 
-{date:"2027-01-27",base:"otaru",title:"Fri dag i Otaru · Torgeir drar hjem",place:"Otaru",sleep:"<a href='https://maps.app.goo.gl/CUrrxzJcovkTxj4u9' target='_blank' rel='noopener'>Dormy Inn Premium Otaru</a> · Torgeir: hjemme",wx:"−1° / −6°",
- tor:{base:"travel",move:1,kj:"帰国",seg:"Hjem",title:"Hjem",place:"Tokyo → Narita → Sola",sleep:"Hjemme",wx:"",travel:"Narita 13:35 → Sola 22:40",intro:"KL862 går fra <b>Narita</b>, ikke Haneda. Keisei Access Express går direkte dit fra Higashi-Nihombashi."},
- intro:"Siste dag i Otaru for de tre. Pakk og fyll tanken før Niseko i morgen.",
+{date:"2027-01-27",base:"kansai",title:"Kyoto/Osaka · Torgeir drar hjem",place:"Kyoto · Osaka",sleep:"Kyoto/Osaka (ikke booket) · Torgeir: hjemme",
+ tor:{base:"travel",move:1,kj:"帰国",seg:"Hjem",title:"Hjem",place:"Narita → Amsterdam → Sola",sleep:"Hjemme",travel:"Narita 13:35 → Sola 22:40",intro:"Rolig morgen på hotellet, så shuttlebussen til terminal 1. KL862 går fra <b>Narita</b>."},
+ intro:"Første hele dag i Kyoto/Osaka for de tre. Planen kommer.",
  items:[
-  {t:"09:00",w:"Ski i Sapporo Teine eller Kiroro igjen",who:"ext",n:"Begge ca. 40 min unna.",opt:1},
-  {t:"09:30",w:"Hotellet → Narita",who:"torgeir",n:"Gå 9 min til Higashi-Nihombashi og ta Keisei Access Express direkte til Narita, ca. 65 min og ca. ¥1 350. Sjekk at toget går helt til Narita Airport."},
-  {t:"11:00",w:"Hent bagasjen på Narita terminal 1",who:"torgeir",n:"Skibagen du sendte med Yamato fra Otaru. Innsjekkingen hos KLM stenger ca. 12:35."},
+  {t:"08:30",w:"Frokost på hotellet",who:"torgeir",n:""},
+  {t:"10:45",w:"Shuttlebuss til flyplassen",who:"torgeir",n:"Vær på flyplassen senest ca. 11:15, siden skiene skal sjekkes inn. Innsjekkingen hos KLM stenger ca. 12:35."},
   {t:"13:35",w:"KL862 Narita → Amsterdam",who:"torgeir",n:"Lander 19:40. KL1183 går videre 21:10 og er på Sola kl. 22:40."},
-  {t:"15:00",w:"Asarigawa Onsen",who:"ext",n:"Dagsbad 11:00–20:00, ca. 20 min fra sentrum.",opt:1},
-  {t:"20:00",w:"Tenguyama og pakking",who:"ext",n:"Nattutsikt over byen. Gjør opp hotellregningen i kveld, og fyll tanken."}
- ],
- bag:"<b>Torgeir:</b> skibagen venter på Yamato-skranken på Narita T1.",
- fact:"Dampklokka utenfor Musikkboksmuseet er laget av Raymond Saunders, som også laget Gastown-klokka i Vancouver. Den spiller hvert 15. minutt."},
+  {t:"Heldag",w:"Kyoto/Osaka",who:"ext",n:"Ikke planlagt ennå."}
+ ]},
 
-{date:"2027-01-28",base:"niseko",who:"ext",move:1,seg:"Reise",title:"Til Niseko",place:"Otaru → Niseko",sleep:"<a href='https://www.google.com/maps/search/?api=1&query=Niseko+Park+Hotel+Hirafu' target='_blank' rel='noopener'>Niseko Park Hotel</a>",wx:"−1° / −6°",travel:"Bil 1,5–2 t",
- items:[
-  {t:"08:00",w:"Frokost og utsjekk",n:"Pakk bilen."},
-  {t:"08:30",w:"Otaru → Niseko (Hirafu)",n:"Ekspressvei til Yoichi IC, så Route 5. 1 t 10 m på bar vei, men regn 1,5–2 t."},
-  {t:"10:30",w:"Ski i Grand Hirafu og Hanazono",n:"Kjøp 3-dagers All Mountain Pass (¥39 500). Parker og sett igjen bagasjen på hotellet (innsjekk 15:00)."},
-  {t:"16:00",w:"Onsen eller kveldsski",n:"Kveldsski 16:00–19:00 i Hirafu."},
-  {t:"19:30",w:"Middag i Hirafu, så Bar Gyu+",n:"Inngangen er en rød kjøleskapsdør. Book middag flere uker før."}
- ],
- bag:"Alt ligger i bilen.",
- fact:"Tokyo stasjon og Bank of Japan i Otaru er tegnet av samme arkitekt, Tatsuno Kingo."},
+{date:"2027-01-28",base:"kansai",who:"ext",title:"Kyoto/Osaka",place:"Kyoto · Osaka",sleep:"Ikke booket",intro:"Ikke planlagt ennå.",items:[]},
+{date:"2027-01-29",base:"kansai",who:"ext",title:"Kyoto/Osaka",place:"Kyoto · Osaka",sleep:"Ikke booket",intro:"Ikke planlagt ennå.",items:[]},
+{date:"2027-01-30",base:"kansai",who:"ext",title:"Kyoto/Osaka",place:"Kyoto · Osaka",sleep:"Ikke booket",intro:"Ikke planlagt ennå. KL862 går fra Narita 13:35 i morgen.",items:[]},
 
-{date:"2027-01-29",base:"niseko",who:"ext",title:"Pudderdag i Niseko",place:"Niseko United",sleep:"<a href='https://www.google.com/maps/search/?api=1&query=Niseko+Park+Hotel+Hirafu' target='_blank' rel='noopener'>Niseko Park Hotel</a>",wx:"ca. −3° / −10°",
+{date:"2027-01-31",base:"travel",who:"ext",move:1,kj:"帰国",seg:"Hjem",title:"Hjem",place:"Kyoto/Osaka → Narita → Sola",sleep:"Hjemme",travel:"Narita 13:35 → Sola 22:40",
  items:[
-  {t:"08:00",w:"Sjekk portene og skredvarselet",n:"Patruljen åpner portene til offpist hver morgen etter Niseko Avalanche Information."},
-  {t:"08:30",w:"Hel dag: Annupuri, Niseko Village og Hanazono",n:"Alle fire områdene henger sammen: 30 heiser og 73 nedfarter."},
-  {t:"16:00",w:"Kveldsski i Hirafu",n:"16:00–19:00, med 12 opplyste nedfarter.",opt:1},
-  {t:"19:30",w:"Izakaya eller jingisukan",n:"For eksempel Niseko Loft Club (lammegrill siden 1989) eller Bang Bang (hjort og yakitori)."}
- ],
- tip:"Portene: gå bare ut gjennom en åpen port, aldri under tauet. Hjelm og skredsender er påbudt, og det koster minst ¥100 000 å bli hentet.",
- fact:"Yōtei (1 898 m) kalles «Ezo Fuji». Østerrikeren Theodor von Lerch lærte japanerne å gå på ski her i 1912. I sesongen 2022/23 falt det 14 m snø."},
-
-{date:"2027-01-30",base:"niseko",who:"ext",move:1,seg:"Reise",title:"Siste pudder, så fly til Tokyo",place:"Niseko → Chitose → Haneda",sleep:"<a href='https://www.google.com/maps/search/?api=1&query=Haneda+Excel+Hotel+Tokyu' target='_blank' rel='noopener'>Haneda Excel Hotel Tokyu</a> (T2)",wx:"ca. −3° / −10°",travel:"Bil ca. 3 t + fly 1 t 40 m",
- items:[
-  {t:"07:30",w:"Sjekk ut og pakk bilen",n:""},
-  {t:"08:30",w:"Siste formiddag i bakken",n:"Stopp senest 12:45."},
-  {t:"13:30",w:"Hirafu → New Chitose",n:"Ekspressvei via Otaru ved dårlig vær. Pass Bifue kan stenge."},
-  {t:"16:45",w:"Fyll tanken og lever bilen",n:"Minst 2 t før avgang på vinterføre."},
-  {t:"19:30",w:"Chitose → Haneda",n:"JAL 19:30–21:15 eller ANA 19:30–21:10. Siste avgang er 21:45. Velg ANA Standard eller Flex, som har 2 × 23 kg og kan endres."},
-  {t:"21:30",w:"Hotell ved Haneda",n:"Haneda Excel Hotel Tokyu ligger inne i terminal 2."}
- ],
- bag:"Ski og kofferter sjekkes inn på innenlandsflyet: JAL Explorer Pass har 2 × 23 kg per person.",
- tip:"Snøstorm er en reell risiko. 25.–26. jan 2026 ble ca. 7 000 reisende sittende fast på Chitose. Er det meldt storm, flytt flyet frem."},
-
-{date:"2027-01-31",base:"travel",who:"ext",move:1,kj:"帰国",seg:"Hjem",title:"Hjem",place:"Haneda → Narita → Sola",sleep:"Hjemme",travel:"Narita 13:35 → Sola 22:40",
- items:[
-  {t:"08:30",w:"Limousine Bus Haneda → Narita",n:"65–95 min, ca. ¥3 600. Søndag morgen er det lite trafikk."},
-  {t:"10:30",w:"Innsjekk KLM, Narita terminal 1",n:"Innsjekkingen stenger ca. 12:35. Husk tax-free-refusjonen i tollen før innsjekk."},
-  {t:"13:35",w:"KL862 Narita → Amsterdam",n:"Bekreft tidene når billetten er kjøpt."},
+  {t:"Morgen",w:"Til Narita",n:"Ikke bestemt ennå. Innsjekkingen hos KLM stenger ca. 12:35."},
+  {t:"10:30",w:"Innsjekk KLM, Narita terminal 1",n:"Husk tax-free-refusjonen i tollen før innsjekk."},
+  {t:"13:35",w:"KL862 Narita → Amsterdam",n:"Lander 19:40."},
   {t:"22:40",w:"Landing Sola",n:"Via KL1183 fra Amsterdam kl. 21:10."}
  ],
  fact:"Fra 1. nov 2026 betaler turister full pris i butikken og får momsen tilbake på flyplassen. Behold alle kvitteringene."}
 ],
 mapPresets:{
-  all:[[139.25,35.4],[142.75,43.75]],
+  all:[[135.2,34.6],[142.75,43.75]],
   tokyo:[[139.66,35.54],[139.83,35.73]],
   hokkaido:[[140.6,42.72],[142.7,43.55]],
   furano:[[142.3,43.29],[142.68,43.51]]
 },
 points:[
-  {id:"s1",type:"stay",num:1,b:"tokyo",ll:[35.69457,139.77973],name:"Comfort Hotel ERA Tokyo Higashi Kanda",label:"Comfort ERA",kj:"東神田",short:"Tokyo · booket",dates:"16.–19. jan · 3 netter",kind:"Overnatting 1",zoom:60,info:"Booket. 4 min fra JR Bakurocho, 2 stopp fra Tokyo stasjon. Asakusa-linja går direkte til Narita og Haneda. Forslag for Torgeirs siste natt 26.–27. jan.",maps:"https://maps.app.goo.gl/wnUPa3JKz82dDyAF6",link:"bo",linkText:"Se overnatting",la:"end",lx:-14,ly:-6},
+  {id:"s1",type:"stay",num:1,b:"tokyo",ll:[35.69457,139.77973],name:"Comfort Hotel ERA Tokyo Higashi Kanda",label:"Comfort ERA",kj:"東神田",short:"Tokyo · booket",dates:"16.–19. jan · 3 netter",kind:"Overnatting 1",zoom:60,info:"Booket. 4 min fra JR Bakurocho, 2 stopp fra Tokyo stasjon. Asakusa-linja går direkte til Narita og Haneda.",maps:"https://maps.app.goo.gl/wnUPa3JKz82dDyAF6",link:"bo",linkText:"Se overnatting",la:"end",lx:-14,ly:-6},
   {id:"s2",type:"stay",num:2,b:"furano",ll:[43.34298,142.36536],name:"Hotel Edel Warme",label:"Edel Warme",kj:"富良野",short:"Furano · hotell med onsen",dates:"19.–21. jan · 2 netter",kind:"Overnatting 2",zoom:40,info:"Døgnåpen resepsjon, onsen i huset og gratis parkering (fra bookingsider, ikke bekreftet). Ca. 2,5 km fra Shin Furano Prince og Furano Ropeway.",maps:"https://maps.app.goo.gl/tJvPD35uXfmBsq886",link:"bo",linkText:"Se alle alternativer"},
-  {id:"s3",type:"stay",num:3,b:"otaru",ll:[43.19842,140.99472],name:"Dormy Inn Premium Otaru",label:"Dormy Inn Otaru",kj:"小樽",short:"Otaru · ved JR Otaru",dates:"21.–28. jan · 7 netter",kind:"Overnatting 3",zoom:40,info:"Naturlig onsen i huset. Resepsjonen er oppgitt som døgnåpen, så si fra på forhånd at dere kommer sent 21. jan. Parkering ca. ¥1 400 per natt, begrenset og uten reservasjon.",maps:"https://maps.app.goo.gl/CUrrxzJcovkTxj4u9",link:"bo",linkText:"Se alle alternativer",la:"end",lx:-14},
-  {id:"s4",type:"stay",num:4,b:"niseko",ext:1,ll:[42.8598,140.7021],name:"Niseko Park Hotel",label:"Niseko Park Hotel",kj:"ニセコ",short:"Niseko · forlengelse",dates:"28.–30. jan · 2 netter",kind:"Overnatting 4 · Jonas, Jørgen, Terje",zoom:40,info:"Japansk rom for 3, onsen og 50 m til heisen i Grand Hirafu. Bookingen åpner 1. okt.",link:"bo",linkText:"Se alle alternativer",la:"end",lx:-14},
-  {id:"s5",type:"stay",num:5,b:"niseko",ext:1,ll:[35.5533,139.7868],name:"Haneda Excel Hotel Tokyu",label:"Haneda Excel",kj:"羽田",short:"Haneda T2 · forlengelse",dates:"30.–31. jan · 1 natt",kind:"Overnatting 5 · Jonas, Jørgen, Terje",zoom:60,info:"Ligger inne i terminal 2. Limousine Bus til Narita om morgenen.",link:"bo",linkText:"Se alle alternativer",lx:14,ly:18,lminz:3},
-  {id:"a1",type:"airport",ll:[35.7720,140.3929],name:"Tokyo Narita (NRT)",label:"Narita",kj:"成田",kind:"Flyplass",info:"KLM ankommer terminal 1 kl. 11:45 den 16. jan og går hjem 13:35 (KL862): Torgeir 27. jan, de tre 31. jan.",b:"travel"},
-  {id:"a2",type:"airport",ll:[35.5494,139.7798],name:"Tokyo Haneda (HND)",label:"Haneda",kj:"羽田",kind:"Flyplass",info:"Innenlandsfly til Chitose: JAL fra terminal 1, ANA og AIRDO fra terminal 2.",b:"travel",la:"end",lx:-10,ly:-4,lminz:3},
-  {id:"a3",type:"airport",ll:[42.7752,141.6923],name:"New Chitose (CTS)",label:"New Chitose",kj:"新千歳",kind:"Flyplass · leiebil",info:"Leiebilskranker i 1F på innenlandsterminalen, og shuttlebuss på 10–15 min til kontorene. Ramen Dojo ligger i 3F.",b:"travel"},
+  {id:"s3",type:"stay",num:3,b:"otaru",ll:[43.19842,140.99472],name:"Dormy Inn Premium Otaru",label:"Dormy Inn Otaru",kj:"小樽",short:"Otaru · ved JR Otaru",dates:"21.–26. jan · 5 netter",kind:"Overnatting 3",zoom:40,info:"Naturlig onsen i huset. Resepsjonen er oppgitt som døgnåpen, så si fra på forhånd at dere kommer sent 21. jan. Parkering ca. ¥1 400 per natt, begrenset og uten reservasjon.",maps:"https://maps.app.goo.gl/CUrrxzJcovkTxj4u9",link:"bo",linkText:"Se alle alternativer",la:"end",lx:-14},
+  {id:"a1",type:"airport",ll:[35.7720,140.3929],name:"Tokyo Narita (NRT)",label:"Narita",kj:"成田",kind:"Flyplass",info:"KLM ankommer terminal 1 kl. 11:45 den 16. jan og går hjem 13:35 (KL862): Torgeir 27. jan, de tre 31. jan. Torgeir lander her fra Chitose 26. jan og sover på Hotel Nikko Narita.",b:"travel"},
+  {id:"a2",type:"airport",ll:[35.5494,139.7798],name:"Tokyo Haneda (HND)",label:"Haneda",kj:"羽田",kind:"Flyplass",info:"JAL511 til Chitose går fra terminal 1 kl. 10:25 den 19. jan.",b:"travel",la:"end",lx:-10,ly:-4,lminz:3},
+  {id:"a3",type:"airport",ll:[42.7752,141.6923],name:"New Chitose (CTS)",label:"New Chitose",kj:"新千歳",kind:"Flyplass · leiebil",info:"Leiebilskranker i 1F på innenlandsterminalen, og shuttlebuss på 10–15 min til kontorene. Ramen Dojo ligger i 3F. 26. jan flyr Torgeir til Narita 12:40 og de tre til Osaka 13:15.",b:"travel"},
+  {id:"a4",type:"airport",ext:1,ll:[34.7855,135.4382],name:"Osaka Itami (ITM)",label:"Itami",kj:"伊丹",kind:"Flyplass · Jonas, Jørgen, Terje",info:"JAL3914 fra Chitose lander 15:20 den 26. jan.",b:"travel"},
   {id:"p1",type:"poi",ll:[35.6585,139.7022],name:"Shibuya Sky",kj:"渋谷スカイ",kind:"16. jan · 20:00",info:"Takterrasse på 229 m. Billettene legges ut 14 dager før.",minz:90,link:"dag-16",linkText:"Dag 16. jan",lx:8,ly:-6},
   {id:"p2",type:"poi",ll:[35.7148,139.7967],name:"Senso-ji",kj:"浅草寺",kind:"17. jan · 10:00",info:"Tokyos eldste tempel (628/645).",minz:8,link:"dag-17",linkText:"Dag 17. jan",la:"end",lx:-8},
   {id:"p3",type:"poi",ll:[35.7101,139.8107],name:"Tokyo Skytree",label:"Skytree",kj:"スカイツリー",kind:"17. jan · 14:00",info:"634 m, verdens høyeste tårn.",minz:8,link:"dag-17",linkText:"Dag 17. jan"},
@@ -1341,24 +1225,21 @@ points:[
   {id:"p11",type:"poi",ll:[43.4930,142.6143],name:"Blue Pond",kj:"青い池",kind:"20. jan · kveld",info:"Lyssatt 17:00–21:00 i januar. Om vinteren er dammen frossen og snødekt.",minz:3,link:"dag-20",linkText:"Dag 20. jan",la:"end",lx:-8},
   {id:"p12",type:"poi",ll:[43.4777,142.6405],name:"Shirahige-fossen",kj:"白ひげの滝",kind:"20. jan · kveld",info:"Rundt 30 m høy foss som renner ut i den blå elva. Lyssatt om kvelden.",minz:5,link:"dag-20",linkText:"Dag 20. jan",ly:14},
   {id:"c1",type:"city",ll:[43.0686,141.3508],name:"Sapporo",kj:"札幌",kind:"25. jan · dagstur",info:"Ølmuseet, Odori-parken og Susukino. 32–45 min med tog fra Otaru.",link:"dag-25",linkText:"Dag 25. jan",minz:1.5},
-  {id:"p15",type:"poi",ll:[43.1906,140.7836],name:"Nikka Yoichi",kj:"余市蒸溜所",kind:"26. jan",info:"Whiskydestilleri fra 1934, 30 min fra Otaru.",minz:3,link:"dag-26",linkText:"Dag 26. jan",la:"end",lx:-8},
+  {id:"p15",type:"poi",ll:[43.1906,140.7836],name:"Nikka Yoichi",kj:"余市蒸溜所",kind:"Valgfritt · 22. jan",info:"Whiskydestilleri fra 1934, 30 min fra Otaru.",minz:3,link:"dag-22",linkText:"Dag 22. jan",la:"end",lx:-8},
   {id:"p16",type:"poi",ll:[43.0764,140.9875],name:"Kiroro",kj:"キロロ",kind:"24. jan · skidag",info:"Skianlegg ca. 40 min fra Otaru.",minz:3,link:"dag-24",linkText:"Dag 24. jan"}
 ],
 routes:[
   {type:"flight",label:"KLM fra Amsterdam til Narita",pts:[[37.2,131.0],[35.7720,140.3929]],bend:-.12},
   {type:"rail",label:"Narita → Higashi-Kanda (Keisei Access Express)",pts:[[35.7720,140.3929],[35.80,140.18],[35.77,139.94],[35.745,139.856],[35.710,139.813],[35.69457,139.77973]]},
   {type:"rail",label:"Higashi-Kanda → Haneda (Asakusa-linja)",pts:[[35.69457,139.77973],[35.666,139.758],[35.638,139.740],[35.60,139.745],[35.5494,139.7798]]},
-  {type:"flight",label:"Haneda → New Chitose 19. jan",pts:[[35.5494,139.7798],[42.7752,141.6923]],bend:.14},
+  {type:"flight",label:"JAL511 Haneda → New Chitose 19. jan",pts:[[35.5494,139.7798],[42.7752,141.6923]],bend:.14},
   {type:"drive",label:"Chitose → Furano (bil)",pts:[[42.7752,141.6923],[42.87,141.84],[42.99,142.02],[43.02,142.40],[43.14,142.43],[43.34298,142.36536]]},
   {type:"drive",label:"Furano → Blue Pond → Shirahige",pts:[[43.34298,142.36536],[43.455,142.47],[43.4930,142.6143],[43.4777,142.6405]]},
   {type:"drive",label:"Furano → Otaru (bil)",pts:[[43.34298,142.36536],[43.43,142.09],[43.54,141.92],[43.20,141.77],[43.10,141.43],[43.14,141.20],[43.19842,140.99472]]},
   {type:"rail",label:"Otaru → Sapporo (JR)",pts:[[43.19842,140.99472],[43.16,141.14],[43.0686,141.3508]]},
-  {type:"rail",label:"Torgeir: Otaru → New Chitose (JR Rapid Airport)",pts:[[43.19842,140.99472],[43.16,141.14],[43.0686,141.3508],[42.90,141.58],[42.7752,141.6923]]},
-  {type:"flight",label:"Torgeir: New Chitose → Haneda 26. jan",pts:[[42.7752,141.6923],[35.5494,139.7798]],bend:-.14},
-  {type:"drive",ext:1,label:"Otaru → Niseko (forlengelse)",pts:[[43.19842,140.99472],[43.19,140.79],[43.02,140.73],[42.90,140.76],[42.8598,140.7021]]},
-  {type:"drive",ext:1,label:"Niseko → New Chitose 30. jan",pts:[[42.8598,140.7021],[42.90,140.76],[43.02,140.73],[43.19,140.79],[43.14,141.20],[43.05,141.45],[42.90,141.60],[42.7752,141.6923]]},
-  {type:"flight",ext:1,label:"New Chitose → Haneda 30. jan",pts:[[42.7752,141.6923],[35.5494,139.7798]],bend:.26},
-  {type:"drive",ext:1,label:"Haneda → Narita 31. jan",pts:[[35.5533,139.7868],[35.62,139.98],[35.70,140.20],[35.7720,140.3929]]}
+  {type:"drive",label:"Otaru → New Chitose 26. jan (bil)",pts:[[43.19842,140.99472],[43.14,141.20],[43.05,141.45],[42.90,141.60],[42.7752,141.6923]]},
+  {type:"flight",label:"Torgeir: ANA NH2152 New Chitose → Narita 26. jan",pts:[[42.7752,141.6923],[35.7720,140.3929]],bend:-.14},
+  {type:"flight",ext:1,label:"JAL3914 New Chitose → Osaka Itami 26. jan",pts:[[42.7752,141.6923],[34.7855,135.4382]],bend:.14}
 ]
 };
 
